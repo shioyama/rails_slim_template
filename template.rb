@@ -50,6 +50,9 @@ download_file "#{TEMPLATE_ROOT}/rails/app/controllers/home_controller.rb", "app/
 route "resource :home, controller: \"home\""
 route "root \"home#show\""
 
+# Helpers
+remove_file "app/helpers/application_helper.rb"
+
 # Views
 download_file "#{TEMPLATE_ROOT}/rails/app/views/layouts/application.html.erb", "app/views/layouts/application.html.erb"
 download_file "#{TEMPLATE_ROOT}/rails/app/views/home/show.html.erb", "app/views/home/show.html.erb"
