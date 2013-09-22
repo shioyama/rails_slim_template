@@ -27,7 +27,6 @@ end
 download_file "#{TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
 
 # Configurations
-download_file "#{TEMPLATE_ROOT}/rails/config/application.yml", "config/application.yml"
 download_file "#{TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
 run "cp config/environments/production.rb config/environments/stage.rb"
 
