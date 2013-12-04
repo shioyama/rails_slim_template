@@ -5,7 +5,7 @@ gem "sqlite3"
 
 # Application
 gem "rake"
-gem "rails", "4.0.1"
+gem "rails", "4.0.2"
 
 # Assets
 gem "sass-rails"
