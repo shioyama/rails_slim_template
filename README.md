@@ -24,7 +24,7 @@ The following highlights what is applied with this template:
 # Requirements
 
 0. A UNIX-based system.
-0. [Ruby 2.0.x](http://www.ruby-lang.org).
+0. [Ruby 2.x.x](http://www.ruby-lang.org).
 0. [Ruby on Rails 4.0.0](http://rubyonrails.org).
 0. A solid internet connection.
 
