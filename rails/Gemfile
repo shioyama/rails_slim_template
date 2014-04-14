@@ -8,8 +8,9 @@ gem "rake"
 gem "rails", "4.0.4"
 
 # Assets
-gem "sass-rails"
 gem "uglifier"
+gem "sass-rails"
+gem "bower-rails"
 
 group :test do
   gem "rspec-rails"
