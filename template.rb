@@ -74,6 +74,7 @@ download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.tx
 
 # Gems
 generate "rspec:install"
+run "bundle exec spring binstub --all"
 
 # Secrets
 run "echo \"SECRET_KEY_BASE=$(bundle exec rake secret)\" >> .env"
