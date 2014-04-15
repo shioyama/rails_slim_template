@@ -12,6 +12,10 @@ gem "uglifier"
 gem "sass-rails"
 gem "bower-rails"
 
+group :development, :test do
+  gem "dotenv-rails"
+end
+
 group :test do
   gem "rspec-rails"
 end

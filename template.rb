@@ -29,6 +29,7 @@ download_file "#{TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
 download_file "#{TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
 run "cp config/environments/production.rb config/environments/stage.rb"
 download_file "#{TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
+download_file "#{TEMPLATE_ROOT}/rails/env.txt", ".env"
 
 application_delta = "config/application.delta.rb"
 download_file("#{TEMPLATE_ROOT}/rails/config/application.delta.rb", application_delta)
@@ -37,10 +38,9 @@ remove_file application_delta
 gsub_file "config/application.rb", /# config.time_zone = \'Central Time \(US & Canada\)\'/, "config.time_zone = \"UTC\""
 gsub_file "config/application.rb", /# config.i18n.default_locale = :de/, "config.i18n.default_locale = \"en-US\""
 
-# Gems
+# Bundler
 download_file "#{TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
-generate "rspec:install"
-download_file "#{TEMPLATE_ROOT}/rails/rspec.txt", ".rspec"
+run "bundle install"
 
 # Controllers
 insert_into_file "app/controllers/application_controller.rb", "  helper :all\n", after: "class ApplicationController < ActionController::Base\n"
@@ -66,8 +66,14 @@ download_file "#{TEMPLATE_ROOT}/rails/public/favicon.ico", "public/favicon.ico"
 # Doc
 download_file "#{TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.txt"
 
+# RSpec
+download_file "#{TEMPLATE_ROOT}/rails/rspec.txt", ".rspec"
+
 # Secrets
 run "echo \"SECRET_KEY_BASE=$(bundle exec rake secret)\" >> .env"
+
+# Gems
+generate "rspec:install"
 
 # Git
 git :init
