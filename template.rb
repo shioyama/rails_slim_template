@@ -25,11 +25,13 @@ end
 # Ruby Version Management
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
 
+# Bundler
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
+run "bundle install"
+
 # Configurations
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
 run "cp config/environments/production.rb config/environments/stage.rb"
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/env.txt", ".env"
 
 application_delta = "config/application.delta.rb"
 download_file("#{SLIM_TEMPLATE_ROOT}/rails/config/application.delta.rb", application_delta)
@@ -38,9 +40,10 @@ remove_file application_delta
 gsub_file "config/application.rb", /# config.time_zone = \'Central Time \(US & Canada\)\'/, "config.time_zone = \"UTC\""
 gsub_file "config/application.rb", /# config.i18n.default_locale = :de/, "config.i18n.default_locale = \"en-US\""
 
-# Bundler
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
-run "bundle install"
+# Secrets
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/env.txt", ".env"
+run "echo \"SECRET_KEY_BASE=$(bundle exec rake secret)\" >> .env"
 
 # Controllers
 insert_into_file "app/controllers/application_controller.rb", "  helper :all\n", after: "class ApplicationController < ActionController::Base\n"
@@ -72,17 +75,14 @@ remove_file "README.rdoc"
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/README.md", "README.md"
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.txt"
 
-# Gems
-generate "rspec:install"
-run "bundle exec spring binstub --all"
-
-# Secrets
-run "echo \"SECRET_KEY_BASE=$(bundle exec rake secret)\" >> .env"
-
 # Specs
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/rspec.txt", ".rspec"
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/spec/spec_helper.rb", "spec/spec_helper.rb"
 create_file "spec/factories.rb"
+
+# Gems
+generate "rspec:install --skip"
+run "bundle exec spring binstub --all"
 
 # Git
 git :init
