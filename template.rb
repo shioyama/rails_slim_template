@@ -77,6 +77,8 @@ run "echo \"SECRET_KEY_BASE=$(bundle exec rake secret)\" >> .env"
 
 # Specs
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/rspec.txt", ".rspec"
+download_file "#{SETUP_TEMPLATE_ROOT}/rails/spec/spec_helper.rb", "spec/spec_helper.rb"
+create_file "spec/factories.rb"
 
 # Git
 git :init
