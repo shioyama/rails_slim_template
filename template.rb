@@ -28,6 +28,7 @@ download_file "#{TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
 # Configurations
 download_file "#{TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
 run "cp config/environments/production.rb config/environments/stage.rb"
+download_file "#{TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
 
 application_delta = "config/application.delta.rb"
 download_file("#{TEMPLATE_ROOT}/rails/config/application.delta.rb", application_delta)
@@ -64,6 +65,9 @@ download_file "#{TEMPLATE_ROOT}/rails/public/favicon.ico", "public/favicon.ico"
 
 # Doc
 download_file "#{TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.txt"
+
+# Secrets
+run "echo \"SECRET_KEY_BASE=$(bundle exec rake secret)\" >> .env"
 
 # Git
 git :init
