@@ -2,8 +2,8 @@ require "net/http"
 require "net/https"
 require "uri"
 
-TEMPLATE_NAME = "Rails Slim Template"
-TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/master"
+SLIM_TEMPLATE_NAME = "Rails Slim Template"
+SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/master"
 
 # Downloads a file, swiching to a secure connection if the source requires it. Also creates parent directories if they do not exist.
 # ==== Parameters
@@ -23,28 +23,28 @@ def download_file source, destination
 end
 
 # Ruby Version Management
-download_file "#{TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
 
 # Configurations
-download_file "#{TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
 run "cp config/environments/production.rb config/environments/stage.rb"
-download_file "#{TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
-download_file "#{TEMPLATE_ROOT}/rails/env.txt", ".env"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/env.txt", ".env"
 
 application_delta = "config/application.delta.rb"
-download_file("#{TEMPLATE_ROOT}/rails/config/application.delta.rb", application_delta)
+download_file("#{SLIM_TEMPLATE_ROOT}/rails/config/application.delta.rb", application_delta)
 insert_into_file "config/application.rb", open(application_delta).read, after: "  # config.i18n.default_locale = :de\n"
 remove_file application_delta
 gsub_file "config/application.rb", /# config.time_zone = \'Central Time \(US & Canada\)\'/, "config.time_zone = \"UTC\""
 gsub_file "config/application.rb", /# config.i18n.default_locale = :de/, "config.i18n.default_locale = \"en-US\""
 
 # Bundler
-download_file "#{TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
 run "bundle install"
 
 # Controllers
 insert_into_file "app/controllers/application_controller.rb", "  helper :all\n", after: "class ApplicationController < ActionController::Base\n"
-download_file "#{TEMPLATE_ROOT}/rails/app/controllers/home_controller.rb", "app/controllers/home_controller.rb"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/app/controllers/home_controller.rb", "app/controllers/home_controller.rb"
 
 # Routes
 route "resource :home, controller: \"home\""
@@ -54,31 +54,31 @@ route "root \"home#show\""
 remove_file "app/helpers/application_helper.rb"
 
 # Views
-download_file "#{TEMPLATE_ROOT}/rails/app/views/layouts/application.html.erb", "app/views/layouts/application.html.erb"
-download_file "#{TEMPLATE_ROOT}/rails/app/views/home/show.html.erb", "app/views/home/show.html.erb"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/application.html.erb", "app/views/layouts/application.html.erb"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/app/views/home/show.html.erb", "app/views/home/show.html.erb"
 
 # Images
 remove_file "app/assets/images/rails.png"
-download_file "#{TEMPLATE_ROOT}/rails/public/apple-touch-icon-114x114.png", "public/apple-touch-icon-114x114.png"
-download_file "#{TEMPLATE_ROOT}/rails/public/apple-touch-icon.png", "public/apple-touch-icon.png"
-download_file "#{TEMPLATE_ROOT}/rails/public/favicon.ico", "public/favicon.ico"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/apple-touch-icon-114x114.png", "public/apple-touch-icon-114x114.png"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/apple-touch-icon.png", "public/apple-touch-icon.png"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/favicon.ico", "public/favicon.ico"
 
 # Doc
-download_file "#{TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.txt"
-
-# RSpec
-download_file "#{TEMPLATE_ROOT}/rails/rspec.txt", ".rspec"
-
-# Secrets
-run "echo \"SECRET_KEY_BASE=$(bundle exec rake secret)\" >> .env"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.txt"
 
 # Gems
 generate "rspec:install"
 
+# Secrets
+run "echo \"SECRET_KEY_BASE=$(bundle exec rake secret)\" >> .env"
+
+# Specs
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/rspec.txt", ".rspec"
+
 # Git
 git :init
-download_file "#{TEMPLATE_ROOT}/rails/gitignore.txt", ".gitignore"
-git add: '.', commit: "-n -a -m \"Added the #{TEMPLATE_NAME}.\""
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/gitignore.txt", ".gitignore"
+git add: '.', commit: "-n -a -m \"Added the #{SLIM_TEMPLATE_NAME}.\""
 
 # End
-say_status :end, "#{TEMPLATE_NAME} Complete!"
+say_status :end, "#{SLIM_TEMPLATE_NAME} Complete!"
