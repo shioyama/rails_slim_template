@@ -81,6 +81,7 @@ download_file "#{SLIM_TEMPLATE_ROOT}/rails/spec/spec_helper.rb", "spec/spec_help
 create_file "spec/factories.rb"
 
 # Gems
+run "spring stop"
 generate "rspec:install --skip"
 run "bundle exec spring binstub --all"
 
