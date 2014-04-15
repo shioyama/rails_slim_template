@@ -4,18 +4,18 @@ source "https://rubygems.org"
 gem "sqlite3"
 
 # Application
-gem "rake"
-gem "rails", "4.1.0"
+gem "rake", "~> 10.2"
+gem "rails", "~> 4.1"
 
 # Assets
-gem "uglifier"
-gem "sass-rails"
-gem "bower-rails"
+gem "uglifier", "~> 2.5"
+gem "sass-rails", "~> 4.0.3"
+gem "bower-rails", "~> 0.7"
 
 group :development, :test do
-  gem "dotenv-rails"
+  gem "dotenv-rails", "~> 0.10"
 end
 
 group :test do
-  gem "rspec-rails"
+  gem "rspec-rails", "~> 2.14"
 end
