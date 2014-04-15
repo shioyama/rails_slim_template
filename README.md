@@ -13,7 +13,27 @@ The following highlights what is applied with this template:
 * Adds the [Rake](https://github.com/jimweirich/rake) gem requirement.
 * Adds the [Ruby on Rails](http://rubyonrails.org) gem requirement.
 * Adds the [Uglifier](https://github.com/lautis/uglifier) gem requirement.
+* Adds the [Slim](https://github.com/slim-template/slim) gem requirement.
+* Adds the [SASS Rails](https://github.com/rails/sass-rails) gem requirement.
+* Adds the [Pry](https://github.com/pry/pry) gem requirement.
+* Adds the [Pry ByeBug](https://github.com/deivid-rodriguez/pry-byebug) gem requirement.
+* Adds the [Pry Remote](https://github.com/Mon-Ouie/pry-remote) gem requirement.
+* Adds the [Pry Rescue](https://github.com/ConradIrwin/pry-rescue) gem requirement.
+* Adds the [Pry Stack Explorer](https://github.com/pry/pry-stack_explorer) gem requirement.
+* Adds the [Bond](https://github.com/cldwalker/bond) gem requirement.
+* Adds the [Wirb](https://github.com/janlelis/wirb) gem requirement.
+* Adds the [Hirb](https://github.com/cldwalker/hirb) gem requirement.
+* Adds the [Awesome Print](https://github.com/michaeldv/awesome_print) gem requirement.
+* Adds the [Capistrano](https://github.com/capistrano/capistrano) gem requirement.
+* Adds the [Database Cleaner](https://github.com/bmabey/database_cleaner) gem requirement.
+* Adds the [Factory Girl Rails](https://github.com/thoughtbot/factory_girl_rails) gem requirement.
 * Adds the [RSpec Rails](https://github.com/dchelimsky/rspec-rails) gem requirement.
+* Adds the [Timecop](https://github.com/jtrupiano/timecop) gem requirement.
+* Adds the [Webmock](https://github.com/bblimke/webmock) gem requirement.
+* Adds the [VCR](https://github.com/vcr/vcr) gem requirement.
+* Adds the [Launchy](https://github.com/copiousfreetime/launchy) gem requirement.
+* Adds the [Capybara](https://github.com/jnicklas/capybara) gem requirement.
+* Adds the [Capybara Extensions](https://github.com/dockyard/capybara-extensions) gem requirement.
 * Installs a customized application.html.erb file with a basic but structured site layout.
 * Installs customized application graphics.
 * Installs customized generator defaults.
