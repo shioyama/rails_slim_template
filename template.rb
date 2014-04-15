@@ -3,7 +3,7 @@ require "net/https"
 require "uri"
 
 TEMPLATE_NAME = "Rails Slim Template"
-TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/v1.0.0"
+TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/master"
 
 # Downloads a file, swiching to a secure connection if the source requires it. Also creates parent directories if they do not exist.
 # ==== Parameters
