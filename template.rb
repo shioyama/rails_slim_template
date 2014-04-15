@@ -54,6 +54,7 @@ route "root \"home#show\""
 remove_file "app/helpers/application_helper.rb"
 
 # Views
+remove_file "app/views/layouts/application.html.erb"
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/application.html.slim", "app/views/layouts/application.html.slim"
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/app/views/home/show.html.slim", "app/views/home/show.html.slim"
 
@@ -64,6 +65,8 @@ download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/apple-touch-icon.png", "public
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/favicon.ico", "public/favicon.ico"
 
 # Doc
+remove_file "README.rdoc"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/README.md", "README.md"
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.txt"
 
 # Gems
