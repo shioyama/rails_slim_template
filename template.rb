@@ -54,8 +54,8 @@ route "root \"home#show\""
 remove_file "app/helpers/application_helper.rb"
 
 # Views
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/application.html.erb", "app/views/layouts/application.html.erb"
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/app/views/home/show.html.erb", "app/views/home/show.html.erb"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/application.html.slim", "app/views/layouts/application.html.slim"
+download_file "#{SLIM_TEMPLATE_ROOT}/rails/app/views/home/show.html.slim", "app/views/home/show.html.slim"
 
 # Images
 remove_file "app/assets/images/rails.png"
