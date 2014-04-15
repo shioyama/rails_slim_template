@@ -64,6 +64,9 @@ download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/apple-touch-icon-114x114.png",
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/apple-touch-icon.png", "public/apple-touch-icon.png"
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/favicon.ico", "public/favicon.ico"
 
+# JavaScripts
+gsub_file "app/assets/javascripts/application.js", /\/\/= require turbolinks\n/, ''
+
 # Doc
 remove_file "README.rdoc"
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/README.md", "README.md"
