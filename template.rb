@@ -28,11 +28,17 @@ download_file "#{SLIM_TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
 # Bundler
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
 run "bundle install"
+run "spring stop"
+generate "rspec:install --skip"
+run "bundle exec spring binstub --all"
 
-# Configurations
+# Configuration -- Database
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
+
+# Configuration -- Stage
 run "cp config/environments/production.rb config/environments/stage.rb"
 
+# Configuration -- Application
 application_delta = "config/application.delta.rb"
 download_file("#{SLIM_TEMPLATE_ROOT}/rails/config/application.delta.rb", application_delta)
 insert_into_file "config/application.rb", open(application_delta).read, after: "  # config.i18n.default_locale = :de\n"
@@ -40,10 +46,10 @@ remove_file application_delta
 gsub_file "config/application.rb", /# config.time_zone = \'Central Time \(US & Canada\)\'/, "config.time_zone = \"UTC\""
 gsub_file "config/application.rb", /# config.i18n.default_locale = :de/, "config.i18n.default_locale = \"en-US\""
 
-# Secrets
+# Configuration -- Secrets
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/env.txt", ".env"
-run "echo \"SECRET_KEY_BASE=$(bundle exec rake secret)\" >> .env"
+run "echo \"SECRET_KEY_BASE=$(bin/rake secret)\" >> .env"
 
 # Controllers
 insert_into_file "app/controllers/application_controller.rb", "  helper :all\n", after: "class ApplicationController < ActionController::Base\n"
@@ -79,11 +85,6 @@ download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.tx
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/rspec.txt", ".rspec"
 download_file "#{SLIM_TEMPLATE_ROOT}/rails/spec/spec_helper.rb", "spec/spec_helper.rb"
 create_file "spec/factories.rb"
-
-# Gems
-run "spring stop"
-generate "rspec:install --skip"
-run "bundle exec spring binstub --all"
 
 # Git
 git :init
