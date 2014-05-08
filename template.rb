@@ -1,59 +1,38 @@
-require "net/http"
-require "net/https"
-require "uri"
-
 SLIM_TEMPLATE_NAME = "Rails Slim Template"
-SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/v1.1.0"
-
-# Downloads a file, swiching to a secure connection if the source requires it. Also creates parent directories if they do not exist.
-# ==== Parameters
-# * +source+ - The remote source URL.
-# * +destination+ - The local file destination path.
-def download_file source, destination
-  say_status :download, "#{source} to #{destination}."
-  uri = URI.parse source
-  http = Net::HTTP.new uri.host, uri.port
-  http.use_ssl = uri.scheme == "https"
-  request = Net::HTTP::Get.new uri.request_uri
-  response = http.request request
-  project_file = File.join destination_root, destination
-  project_directory = File.dirname project_file
-  FileUtils.mkdir_p(project_directory) unless File.exist?(project_directory)
-  File.open(project_file, "w") {|file| file.write response.body}
-end
+SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/master"
 
 # Ruby Version Management
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
+get "#{SLIM_TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
 
 # Bundler
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
+get "#{SLIM_TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
 run "bundle install"
 run "spring stop"
 generate "rspec:install --skip"
 run "bundle exec spring binstub --all"
 
 # Configuration -- Database
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
+get "#{SLIM_TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
 
 # Configuration -- Stage
 run "cp config/environments/production.rb config/environments/stage.rb"
 
 # Configuration -- Application
 application_delta = "config/application.delta.rb"
-download_file("#{SLIM_TEMPLATE_ROOT}/rails/config/application.delta.rb", application_delta)
+get("#{SLIM_TEMPLATE_ROOT}/rails/config/application.delta.rb", application_delta)
 insert_into_file "config/application.rb", open(application_delta).read, after: "  # config.i18n.default_locale = :de\n"
 remove_file application_delta
 gsub_file "config/application.rb", /# config.time_zone = \'Central Time \(US & Canada\)\'/, "config.time_zone = \"UTC\""
 gsub_file "config/application.rb", /# config.i18n.default_locale = :de/, "config.i18n.default_locale = \"en-US\""
 
 # Configuration -- Secrets
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/env.txt", ".env"
+get "#{SLIM_TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
+get "#{SLIM_TEMPLATE_ROOT}/rails/env.txt", ".env"
 run "echo \"SECRET_KEY_BASE=$(bin/rake secret)\" >> .env"
 
 # Controllers
 insert_into_file "app/controllers/application_controller.rb", "  helper :all\n", after: "class ApplicationController < ActionController::Base\n"
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/app/controllers/home_controller.rb", "app/controllers/home_controller.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/app/controllers/home_controller.rb", "app/controllers/home_controller.rb"
 
 # Routes
 route "resource :home, controller: \"home\""
@@ -64,31 +43,31 @@ remove_file "app/helpers/application_helper.rb"
 
 # Views
 remove_file "app/views/layouts/application.html.erb"
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/application.html.slim", "app/views/layouts/application.html.slim"
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/app/views/home/show.html.slim", "app/views/home/show.html.slim"
+get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/application.html.slim", "app/views/layouts/application.html.slim"
+get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/home/show.html.slim", "app/views/home/show.html.slim"
 
 # Images
 remove_file "app/assets/images/rails.png"
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/apple-touch-icon-114x114.png", "public/apple-touch-icon-114x114.png"
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/apple-touch-icon.png", "public/apple-touch-icon.png"
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/favicon.ico", "public/favicon.ico"
+get "#{SLIM_TEMPLATE_ROOT}/rails/public/apple-touch-icon-114x114.png", "public/apple-touch-icon-114x114.png"
+get "#{SLIM_TEMPLATE_ROOT}/rails/public/apple-touch-icon.png", "public/apple-touch-icon.png"
+get "#{SLIM_TEMPLATE_ROOT}/rails/public/favicon.ico", "public/favicon.ico"
 
 # JavaScripts
 gsub_file "app/assets/javascripts/application.js", /\/\/= require turbolinks\n/, ''
 
 # Doc
 remove_file "README.rdoc"
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/README.md", "README.md"
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.txt"
+get "#{SLIM_TEMPLATE_ROOT}/rails/README.md", "README.md"
+get "#{SLIM_TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.txt"
 
 # Specs
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/rspec.txt", ".rspec"
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/spec/spec_helper.rb", "spec/spec_helper.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/rspec.txt", ".rspec"
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/spec_helper.rb", "spec/spec_helper.rb"
 create_file "spec/factories.rb"
 
 # Git
 git :init
-download_file "#{SLIM_TEMPLATE_ROOT}/rails/gitignore.txt", ".gitignore"
+get "#{SLIM_TEMPLATE_ROOT}/rails/gitignore.txt", ".gitignore"
 git add: '.', commit: "-n -a -m \"Added the #{SLIM_TEMPLATE_NAME}.\""
 
 # End
