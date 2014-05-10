@@ -24,6 +24,7 @@ group :development, :test do
   gem "wirb", "~> 1.0"
   gem "hirb", "~> 0.7"
   gem "awesome_print", "~> 1.2"
+  gem "priscilla", "~> 1.0"
 end
 
 group :development do
