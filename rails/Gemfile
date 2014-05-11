@@ -38,7 +38,7 @@ group :test do
   gem "factory_girl_rails", "~> 4.4"
   gem "rspec-rails", "~> 2.14"
   gem "timecop", "~> 0.7.1"
-  gem "webmock", "~> 1.17"
+  gem "typhoeus", "~> 0.6"
   gem "vcr", "~> 2.9"
   gem "launchy", "~> 2.4" # Allows save_and_open_page to work in Capybara.
   gem "capybara", "~> 2.2"

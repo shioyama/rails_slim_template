@@ -33,7 +33,7 @@ The following highlights what is applied with this template:
 * Adds the [Factory Girl Rails](https://github.com/thoughtbot/factory_girl_rails) gem requirement.
 * Adds the [RSpec Rails](https://github.com/dchelimsky/rspec-rails) gem requirement.
 * Adds the [Timecop](https://github.com/jtrupiano/timecop) gem requirement.
-* Adds the [Webmock](https://github.com/bblimke/webmock) gem requirement.
+* Adds the [Typhoeus](https://github.com/typhoeus/typhoeus) gem requirement.
 * Adds the [VCR](https://github.com/vcr/vcr) gem requirement.
 * Adds the [Launchy](https://github.com/copiousfreetime/launchy) gem requirement.
 * Adds the [Capybara](https://github.com/jnicklas/capybara) gem requirement.

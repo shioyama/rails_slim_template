@@ -17,7 +17,7 @@ ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 VCR.configure do |cassette|
   cassette.cassette_library_dir = "spec/cassettes"
-  cassette.hook_into :webmock
+  cassette.hook_into :typhoeus
   cassette.configure_rspec_metadata!
 end
 
