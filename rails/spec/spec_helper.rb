@@ -34,6 +34,11 @@ RSpec.configure do |config|
 
   config.before(:each) { DatabaseCleaner.strategy = :transaction }
   config.before(:each, js: true) { DatabaseCleaner.strategy = :truncation }
-  config.before(:each) { DatabaseCleaner.start }
+
+  config.before :each do
+    DatabaseCleaner.start
+    Typhoeus::Expectation.clear
+  end
+
   config.after(:each) { DatabaseCleaner.clean }
 end
