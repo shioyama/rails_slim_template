@@ -62,6 +62,7 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.txt"
 
 # Specs
 get "#{SLIM_TEMPLATE_ROOT}/rails/rspec.txt", ".rspec"
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/rspec_helpers.rb", "spec/support/rspec_helpers.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/spec_helper.rb", "spec/spec_helper.rb"
 create_file "spec/factories.rb"
 
