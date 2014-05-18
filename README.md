@@ -7,7 +7,7 @@ the `rails new <app name>` defaults. This template is best applied when creating
 
 The following highlights what is applied with this template:
 
-* Uses [Ruby 2.1.1](http://www.ruby-lang.org).
+* Uses [Ruby 2.1.2](http://www.ruby-lang.org).
 * Uses [Ruby on Rails 4.1.x](http://rubyonrails.org).
 * Adds the [SQLite3](https://www.sqlite.org) gem.
 * Adds the [Rake](https://github.com/jimweirich/rake) gem requirement.
@@ -26,6 +26,7 @@ The following highlights what is applied with this template:
 * Adds the [Wirb](https://github.com/janlelis/wirb) gem requirement.
 * Adds the [Hirb](https://github.com/cldwalker/hirb) gem requirement.
 * Adds the [Awesome Print](https://github.com/michaeldv/awesome_print) gem requirement.
+* Adds the [Priscilla](https://github.com/Arkham/priscilla) gem requirement.
 * Adds the [Capistrano](https://github.com/capistrano/capistrano) gem requirement.
 * Adds the [Spring](https://github.com/rails/spring) gem requirement.
 * Adds the [Spring Commands RSpec](https://github.com/jonleighton/spring-commands-rspec) gem requirement.
@@ -58,7 +59,7 @@ Open a terminal window and execute one the following command lines depending on 
 
 Current Version (stable):
 
-    rails new demo -d sqlite3 -T -f --skip-bundle -m https://raw.github.com/bkuhlmann/rails_slim_template/v1.1.0/template.rb
+    rails new demo -d sqlite3 -T -f --skip-bundle -m https://raw.github.com/bkuhlmann/rails_slim_template/v1.2.0/template.rb
 
 Master Version (unstable):
 
