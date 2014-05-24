@@ -24,6 +24,7 @@ insert_into_file "config/application.rb", open(application_delta).read, after: "
 remove_file application_delta
 gsub_file "config/application.rb", /# config.time_zone = \'Central Time \(US & Canada\)\'/, "config.time_zone = \"UTC\""
 gsub_file "config/application.rb", /# config.i18n.default_locale = :de/, "config.i18n.default_locale = \"en-US\""
+insert_into_file "config/environments/development.rb", "\n  # Generate digests for assets URLs.\n  config.assets.digest = true\n", after: "  config.assets.debug = true\n"
 
 # Configuration -- Secrets
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
