@@ -43,4 +43,5 @@ group :test do
   gem "launchy", "~> 2.4" # Allows save_and_open_page to work in Capybara.
   gem "capybara", "~> 2.2"
   gem "capybara-extensions", "~> 0.4"
+  gem "poltergeist"
 end

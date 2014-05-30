@@ -4,6 +4,7 @@ require "rspec/autorun"
 require "rspec/rails"
 require "capybara/rails"
 require "capybara-extensions"
+require "capybara/poltergeist"
 require "vcr"
 require "pry"
 require "pry-byebug"
@@ -35,6 +36,7 @@ RSpec.configure do |config|
   config.before(:suite) do
     DatabaseCleaner.clean_with :truncation
     FactoryGirl.lint
+    Capybara.javascript_driver = :poltergeist
     Capybara.asset_host = "http://localhost:3000"
   end
 
