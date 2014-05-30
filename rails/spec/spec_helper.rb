@@ -13,7 +13,7 @@ require "pry-stack_explorer"
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |file| require file }
 
-ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
+ActiveRecord::Migration.maintain_test_schema!
 
 VCR.configure do |cassette|
   cassette.cassette_library_dir = "spec/cassettes"
