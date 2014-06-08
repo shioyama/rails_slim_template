@@ -16,10 +16,10 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |file| require file }
 
 ActiveRecord::Migration.maintain_test_schema!
 
-VCR.configure do |cassette|
-  cassette.cassette_library_dir = "spec/cassettes"
-  cassette.hook_into :typhoeus
-  cassette.configure_rspec_metadata!
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/cassettes"
+  config.hook_into :typhoeus
+  config.configure_rspec_metadata!
 end
 
 RSpec.configure do |config|
