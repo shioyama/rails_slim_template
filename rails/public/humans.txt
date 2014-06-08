@@ -3,7 +3,7 @@
 
 /* TEAM */
   Developer: Brooke Kuhlmann
-  Site: http://www.redalchemist.com
+  Site: http://www.alchemists.io
   Twitter: @bkuhlmann
   Location: Boulder, CO
 
