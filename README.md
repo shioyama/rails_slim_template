@@ -1,5 +1,7 @@
 # Overview
 
+[![Gittip](http://img.shields.io/gittip/bkuhlmann.svg)](https://www.gittip.com/bkuhlmann)
+
 Bootstraps a Ruby on Rails project with the minimum essentials to get started which is less than what is provided with
 the `rails new <app name>` defaults. This template is best applied when creating a new Ruby on Rails application.
 
