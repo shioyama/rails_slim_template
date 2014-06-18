@@ -25,6 +25,7 @@ end
 RSpec.configure do |config|
   config.include RSpec::Helpers
   config.include FactoryGirl::Syntax::Methods
+  config.include AbstractController::Translation
 
   config.expect_with(:rspec) { |expectation| expectation.syntax = :expect }
   config.run_all_when_everything_filtered = true
