@@ -28,7 +28,6 @@ group :development, :test do
 end
 
 group :development do
-  gem "capistrano"
   gem "spring"
   gem "spring-commands-rspec"
 end
