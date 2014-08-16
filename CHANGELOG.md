@@ -1,4 +1,4 @@
-# v1.2.0
+# v1.2.0 (2014-05-18)
 
 * Refactored the "download_file" method to use the native Thor "get" method instead.
 * Updated to Ruby 2.1.2.
@@ -8,7 +8,7 @@
 * Added RSpec configuration to always use "expect" syntax.
 * Added RSpec helper and FactoryGirl initialization support.
 
-# v1.1.0
+# v1.1.0 (2014-04-15)
 
 * Updated to MRI 2.1.1.
 * Updated to Rails 4.1.0.
@@ -17,6 +17,6 @@
 * Added the README.md file to template generation.
 * Added RSpec setup.
 
-# v1.0.0
+# v1.0.0 (2013-09-22)
 
 * Initial version.
