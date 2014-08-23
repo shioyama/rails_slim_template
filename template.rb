@@ -30,9 +30,13 @@ run "cp config/environments/production.rb config/environments/stage.rb"
 
 # Configuration - Development
 uncomment_lines "config/environments/development.rb", /config.action_view.raise_on_missing_translations/
+insert_into_file "config/environments/development.rb", "\n  # Raise error when receiving unauthorized parameters.\n", after: "config.action_controller.perform_caching = false\n"
+insert_into_file "config/environments/development.rb", "  config.action_controller.action_on_unpermitted_parameters = :raise\n", after: "# Raise error when receiving unauthorized parameters.\n"
 
 # Configuration - Test
 uncomment_lines "config/environments/test.rb", /config.action_view.raise_on_missing_translations/
+insert_into_file "config/environments/test.rb", "\n  # Raise error when receiving unauthorized parameters.\n", after: "config.action_controller.allow_forgery_protection = false\n"
+insert_into_file "config/environments/test.rb", "  config.action_controller.action_on_unpermitted_parameters = :raise\n", after: "# Raise error when receiving unauthorized parameters.\n"
 
 # Configuration -- Secrets
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
