@@ -25,6 +25,7 @@ group :development, :test do
   gem "hirb"
   gem "awesome_print"
   gem "priscilla"
+  gem "jasmine"
 end
 
 group :development do
