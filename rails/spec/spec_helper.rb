@@ -27,7 +27,6 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
   config.include AbstractController::Translation
 
-  config.expect_with(:rspec) { |expectation| expectation.syntax = :expect }
   config.run_all_when_everything_filtered = true
   config.filter_run focus: true
   config.order = "random"
@@ -35,6 +34,11 @@ RSpec.configure do |config|
 
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
+  end
+
+  config.expect_with :rspec do |expectations|
+    expectations.syntax = :expect
+    expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 
   config.before(:suite) do
