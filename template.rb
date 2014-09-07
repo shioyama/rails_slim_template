@@ -82,6 +82,7 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/factory_girl.rb", "spec
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/typhoeus.rb", "spec/support/extensions/typhoeus.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/vcr.rb", "spec/support/extensions/vcr.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/base_config.rb", "spec/support/kit/base_config.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/helpers.rb", "spec/support/kit/helpers.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/manage_temp_dir.rb", "spec/support/kit/manage_temp_dir.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/rails_config.rb", "spec/support/kit/rails_config.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/suppress_garbage_collection.rb", "spec/support/kit/suppress_garbage_collection.rb"
