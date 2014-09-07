@@ -74,8 +74,8 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/README.md", "README.md"
 get "#{SLIM_TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.txt"
 
 # Specs
+remove_file "spec/rails_helper.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/rspec.txt", ".rspec"
-
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/capybara.rb", "spec/support/extensions/capybara.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/database_cleaner.rb", "spec/support/extensions/database_cleaner.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/factory_girl.rb", "spec/support/extensions/factory_girl.rb"
