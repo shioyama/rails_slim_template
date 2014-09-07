@@ -75,6 +75,18 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.txt"
 
 # Specs
 get "#{SLIM_TEMPLATE_ROOT}/rails/rspec.txt", ".rspec"
+
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/capybara.rb", "spec/support/extensions/capybara.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/database_cleaner.rb", "spec/support/extensions/database_cleaner.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/factory_girl.rb", "spec/support/extensions/factory_girl.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/typhoeus.rb", "spec/support/extensions/typhoeus.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/vcr.rb", "spec/support/extensions/vcr.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/base_config.rb", "spec/support/kit/base_config.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/manage_temp_dir.rb", "spec/support/kit/manage_temp_dir.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/rails_config.rb", "spec/support/kit/rails_config.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/suppress_garbage_collection.rb", "spec/support/kit/suppress_garbage_collection.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/suppress_stderr.rb", "spec/support/kit/suppress_stderr.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/suppress_stdout.rb", "spec/support/kit/suppress_stdout.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/rspec_helpers.rb", "spec/support/rspec_helpers.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/spec_helper.rb", "spec/spec_helper.rb"
 create_file "spec/factories.rb"
