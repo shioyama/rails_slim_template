@@ -17,5 +17,5 @@ Dir[File.join(File.dirname(__FILE__), "support/extensions/**/*.rb")].each { |fil
 Dir[File.join(File.dirname(__FILE__), "support/kit/**/*.rb")].each { |file| require file }
 
 RSpec.configure do |config|
-  # NOTE: Add app specific configuration here. For the common configuration, see the "support" folder.
+  # NOTE: Add app specific configuration here. For the default configuration, see the "support" folder.
 end
