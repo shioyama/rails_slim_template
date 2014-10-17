@@ -83,7 +83,6 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/vcr.rb", "spec/support/
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/default_config.rb", "spec/support/kit/default_config.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/garbage_collection.rb", "spec/support/kit/garbage_collection.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/helpers.rb", "spec/support/kit/helpers.rb"
-get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/rails_config.rb", "spec/support/kit/rails_config.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/stderr.rb", "spec/support/kit/stderr.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/stdout.rb", "spec/support/kit/stdout.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/temp_dir.rb", "spec/support/kit/temp_dir.rb"
