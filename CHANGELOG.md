@@ -1,3 +1,29 @@
+# v2.0.0 (2014-10-18)
+
+- Removed deprecated RSpec settings.
+- Removed the Capistrano gem.
+- Added "config.assets.debug = true" to development.rb.
+- Added email settings to development.rb.
+- Added the [Poltergeist](https://github.com/teampoltergeist/poltergeist) gem.
+- Added the [Jasmine](http://jasmine.github.io) gem.
+- Added the [rspec-html-matchers](https://github.com/kucaahbe/rspec-html-matchers) gem.
+- Added version information for sass-rails gem.
+- Added errors for translations (and RSpec support).
+- Added exceptions to development and test environments when a controller receives unauthorized parameters for enhanced
+  debugging.
+- Added RSpec chain clause expectation to spec helper.
+- Updated to Ruby 2.1.3.
+- Updated spec helper to use ActiveRecord::Migration.maintain_test_schema! instead of
+  ActiveRecord::Migration.check_pending!
+- Updated Gemfile to be less restictive of gem versions.
+- Updated CONTRIBUTING guidelines and documentation.
+- Updated default language to be en instead of en-US.
+- Updated application layout with better defaults.
+- Updated RSpec config to verify partial doubles.
+- Updated RSpec Rails config kit to infer spec type from file location.
+- Refactored RSpec setup into extensions and kit configurations.
+- Refactored Rails specific configuration to RSpec Rails helper.
+
 # v1.2.0 (2014-05-18)
 
 - Refactored the "download_file" method to use the native Thor "get" method instead.
