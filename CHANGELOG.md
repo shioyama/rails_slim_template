@@ -2,6 +2,15 @@
 
 - Removed deprecated RSpec settings.
 - Removed the Capistrano gem.
+- Updated to Ruby 2.1.3.
+- Updated spec helper to use ActiveRecord::Migration.maintain_test_schema! instead of
+  ActiveRecord::Migration.check_pending!
+- Updated Gemfile to be less restictive of gem versions.
+- Updated CONTRIBUTING guidelines and documentation.
+- Updated default language to be en instead of en-US.
+- Updated application layout with better defaults.
+- Updated RSpec config to verify partial doubles.
+- Updated RSpec Rails config kit to infer spec type from file location.
 - Added "config.assets.debug = true" to development.rb.
 - Added email settings to development.rb.
 - Added the [Poltergeist](https://github.com/teampoltergeist/poltergeist) gem.
@@ -12,15 +21,6 @@
 - Added exceptions to development and test environments when a controller receives unauthorized parameters for enhanced
   debugging.
 - Added RSpec chain clause expectation to spec helper.
-- Updated to Ruby 2.1.3.
-- Updated spec helper to use ActiveRecord::Migration.maintain_test_schema! instead of
-  ActiveRecord::Migration.check_pending!
-- Updated Gemfile to be less restictive of gem versions.
-- Updated CONTRIBUTING guidelines and documentation.
-- Updated default language to be en instead of en-US.
-- Updated application layout with better defaults.
-- Updated RSpec config to verify partial doubles.
-- Updated RSpec Rails config kit to infer spec type from file location.
 - Refactored RSpec setup into extensions and kit configurations.
 - Refactored Rails specific configuration to RSpec Rails helper.
 
