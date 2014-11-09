@@ -9,6 +9,7 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
 run "bundle install"
 run "spring stop"
 generate "rspec:install --skip"
+generate "jasmine:install"
 run "bundle exec spring binstub --all"
 
 # Configuration -- Database
@@ -89,6 +90,7 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/temp_dir.rb", "spec/support/ki
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/rspec_helpers.rb", "spec/support/rspec_helpers.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/rails_helper.rb", "spec/rails_helper.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/spec_helper.rb", "spec/spec_helper.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/javascripts/support/jasmine.yml", "spec/javascripts/support/jasmine.yml"
 create_file "spec/factories.rb"
 
 # Git
