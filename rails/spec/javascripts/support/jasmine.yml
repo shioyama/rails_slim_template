@@ -11,6 +11,7 @@
 #   - dist/**/*.js
 #
 src_files:
+  - assets/application.js
   - assets/jasmine-jquery.js
 
 # stylesheets
