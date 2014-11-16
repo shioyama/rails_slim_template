@@ -1,6 +1,6 @@
 module RSpec
   module Helpers
-    def it_also message
+    def also message
       block_given? ? yield : skip(message)
     end
   end
