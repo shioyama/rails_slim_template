@@ -87,7 +87,6 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/helpers.rb", "spec/support/kit
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/stderr.rb", "spec/support/kit/stderr.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/stdout.rb", "spec/support/kit/stdout.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/temp_dir.rb", "spec/support/kit/temp_dir.rb"
-get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/rspec_helpers.rb", "spec/support/rspec_helpers.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/rails_helper.rb", "spec/rails_helper.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/spec_helper.rb", "spec/spec_helper.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/javascripts/support/jasmine.yml", "spec/javascripts/support/jasmine.yml"
