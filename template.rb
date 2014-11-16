@@ -1,5 +1,5 @@
 SLIM_TEMPLATE_NAME = "Rails Slim Template"
-SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/v2.0.0"
+SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/master"
 
 # Ruby Version Management
 get "#{SLIM_TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
