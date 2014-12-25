@@ -5,12 +5,12 @@ gem "sqlite3"
 
 # Application
 gem "rake"
-gem "rails", "~> 4.1"
+gem "rails", "~> 4.2"
 
 # Assets
 gem "uglifier"
 gem "slim-rails"
-gem "sass-rails", "~> 4.0.3"
+gem "sass-rails"
 gem "jquery-rails"
 
 group :development, :test do
