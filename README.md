@@ -15,10 +15,10 @@ The following highlights what is applied with this template:
 - Adds the [Rake](https://github.com/jimweirich/rake) gem requirement.
 - Adds the [Ruby on Rails](http://rubyonrails.org) gem requirement.
 - Adds the [Uglifier](https://github.com/lautis/uglifier) gem requirement.
-- Adds the [Slim](https://github.com/slim-template/slim) gem requirement.
+- Adds the [Slim Rails](https://github.com/slim-template/slim) gem requirement.
 - Adds the [SASS Rails](https://github.com/rails/sass-rails) gem requirement.
 - Adds the [jQuery Rails](https://github.com/rails/jquery-rails) gem requirement.
-- Adds the [Dotenc Rails](https://github.com/bkeepers/dotenv) gem requirement.
+- Adds the [Dotenv Rails](https://github.com/bkeepers/dotenv) gem requirement.
 - Adds the [Pry](https://github.com/pry/pry) gem requirement.
 - Adds the [Pry ByeBug](https://github.com/deivid-rodriguez/pry-byebug) gem requirement.
 - Adds the [Pry Remote](https://github.com/Mon-Ouie/pry-remote) gem requirement.
