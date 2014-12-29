@@ -1,3 +1,15 @@
+# v3.0.0 (2014-12-29)
+
+- Updated to Ruby 2.2.0.
+- Updated to Rails 4.2.x.
+- Updated spec helper to comment custom config until needed.
+- Added [Jasmine jQuery Rails](https://github.com/travisjeffery/jasmine-jquery-rails) gem.
+- Added application.js to Jasmine source files.
+- Added the [Climate Control](https://github.com/thoughtbot/climate_control) gem.
+- Refactored RSpec use of `pending` to be `skip` instead.
+- Refactored RSpec `it_also` helper to simply `also`.
+- Refactored RSpec support extensions into core and rails specific extensions.
+
 # v2.0.0 (2014-10-18)
 
 - Removed deprecated RSpec settings.

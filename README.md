@@ -9,8 +9,8 @@ the `rails new <app name>` defaults. This template is best applied when creating
 
 The following highlights what is applied with this template:
 
-- Uses [Ruby 2.1.3](http://www.ruby-lang.org).
-- Uses [Ruby on Rails 4.1.x](http://rubyonrails.org).
+- Uses [Ruby 2.2.x](http://www.ruby-lang.org).
+- Uses [Ruby on Rails 4.2.x](http://rubyonrails.org).
 - Adds the [SQLite3](https://www.sqlite.org) gem.
 - Adds the [Rake](https://github.com/jimweirich/rake) gem requirement.
 - Adds the [Ruby on Rails](http://rubyonrails.org) gem requirement.
@@ -30,12 +30,14 @@ The following highlights what is applied with this template:
 - Adds the [Awesome Print](https://github.com/michaeldv/awesome_print) gem requirement.
 - Adds the [Priscilla](https://github.com/Arkham/priscilla) gem requirement.
 - Adds the [Jasmine](http://jasmine.github.io) gem requirement.
+- Adds the [Jasmine jQuery Rails](https://github.com/travisjeffery/jasmine-jquery-rails) gem requirement.
 - Adds the [Spring](https://github.com/rails/spring) gem requirement.
 - Adds the [Spring Commands RSpec](https://github.com/jonleighton/spring-commands-rspec) gem requirement.
 - Adds the [Database Cleaner](https://github.com/bmabey/database_cleaner) gem requirement.
 - Adds the [Factory Girl Rails](https://github.com/thoughtbot/factory_girl_rails) gem requirement.
 - Adds the [RSpec Rails](https://github.com/dchelimsky/rspec-rails) gem requirement.
-- Adds the [rspec-html-matchers](https://github.com/kucaahbe/rspec-html-matchers) gem requirement.
+- Adds the [RSpec HTML Matchers](https://github.com/kucaahbe/rspec-html-matchers) gem requirement.
+- Adds the [Climate Control](https://github.com/thoughtbot/climate_control) gem requirement.
 - Adds the [Timecop](https://github.com/jtrupiano/timecop) gem requirement.
 - Adds the [Typhoeus](https://github.com/typhoeus/typhoeus) gem requirement.
 - Adds the [VCR](https://github.com/vcr/vcr) gem requirement.
@@ -54,7 +56,7 @@ The following highlights what is applied with this template:
 
 0. A UNIX-based system.
 0. [Ruby 2.x.x](http://www.ruby-lang.org).
-0. [Ruby on Rails 4.1.x](http://rubyonrails.org).
+0. [Ruby on Rails 4.2.x](http://rubyonrails.org).
 0. A solid internet connection.
 
 # Usage
@@ -63,7 +65,7 @@ Open a terminal window and execute one the following command lines depending on 
 
 Current Version (stable):
 
-    rails new demo -d sqlite3 -T -f --skip-bundle -m https://raw.github.com/bkuhlmann/rails_slim_template/v2.0.0/template.rb
+    rails new demo -d sqlite3 -T -f --skip-bundle -m https://raw.github.com/bkuhlmann/rails_slim_template/v3.0.0/template.rb
 
 Master Version (unstable):
 
