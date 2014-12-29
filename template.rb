@@ -24,7 +24,6 @@ gsub_file "config/application.rb", /# config.time_zone = \'Central Time \(US & C
 gsub_file "config/application.rb", /# config.i18n.default_locale = :de/, "config.i18n.default_locale = :en"
 insert_into_file "config/environments/development.rb", "  config.action_mailer.smtp_settings = {address: \"localhost\", port: 1025}\n", after: "  config.action_mailer.raise_delivery_errors = false\n"
 insert_into_file "config/environments/development.rb", "  config.action_mailer.delivery_method = :smtp\n", after: "  config.action_mailer.raise_delivery_errors = false\n"
-insert_into_file "config/environments/development.rb", "\n  # Generate digests for assets URLs.\n  config.assets.digest = true\n", after: "  config.assets.debug = true\n"
 
 # Configuration -- Stage
 run "cp config/environments/production.rb config/environments/stage.rb"
