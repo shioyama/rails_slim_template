@@ -25,7 +25,6 @@ group :development, :test do
   gem "hirb"
   gem "awesome_print"
   gem "priscilla"
-  gem "web-console"
   gem "jasmine"
   gem "jasmine-jquery-rails"
 end
