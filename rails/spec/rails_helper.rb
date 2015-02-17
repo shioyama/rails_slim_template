@@ -12,7 +12,7 @@ Dir[File.join(File.dirname(__FILE__), "support/extensions/rails/**/*.rb")].each 
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
-  config.infer_spec_type_from_file_location!
   config.include AbstractController::Translation
   config.include ActiveSupport::Testing::TimeHelpers
+  config.infer_spec_type_from_file_location!
 end
