@@ -3,9 +3,6 @@ require File.expand_path("../../config/environment", __FILE__)
 
 require "spec_helper"
 require "rspec/rails"
-require "capybara/rails"
-require "capybara-extensions"
-require "capybara/poltergeist"
 
 Dir[File.join(File.dirname(__FILE__), "support/extensions/rails/**/*.rb")].each { |file| require file }
 
