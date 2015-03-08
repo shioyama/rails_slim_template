@@ -9,5 +9,5 @@ module RSpec
 end
 
 RSpec.configure do |config|
-  config.include RSpec::Kit::Helpers
+  config.include RSpec::Kit::Helpers type: :feature
 end
