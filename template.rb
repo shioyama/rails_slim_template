@@ -13,7 +13,7 @@ generate "jasmine:install"
 run "bundle exec spring binstub --all"
 
 # Configuration - Initializers
-get "#{SETUP_TEMPLATE_ROOT}/rails/config/initializers/inflections.rb", "config/initializers/inflections.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/inflections.rb", "config/initializers/inflections.rb"
 
 # Configuration -- Database
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
