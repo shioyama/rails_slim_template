@@ -14,6 +14,7 @@ run "bundle exec spring binstub --all"
 
 # Configuration - Initializers
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/inflections.rb", "config/initializers/inflections.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/priscilla.rb", "config/initializers/priscilla.rb"
 
 # Configuration -- Database
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
