@@ -7,10 +7,8 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
 # Bundler
 get "#{SLIM_TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
 run "bundle install"
-run "spring stop"
 generate "rspec:install --skip"
 generate "jasmine:install"
-run "bundle exec spring binstub --all"
 
 # Configuration - Initializers
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/inflections.rb", "config/initializers/inflections.rb"
