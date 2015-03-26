@@ -8,8 +8,18 @@
 
 # Usage
 
-# Testing
+# Tests
 
-# Deploying
+# Deployment
 
-# Resources
+# Versioning
+
+# Code of Conduct
+
+# Contributions
+
+# License
+
+# History
+
+# Credits
