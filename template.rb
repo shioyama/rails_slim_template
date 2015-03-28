@@ -76,7 +76,6 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/README.md", "README.md"
 get "#{SLIM_TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.txt"
 
 # Specs
-get "#{SLIM_TEMPLATE_ROOT}/rails/rspec.txt", ".rspec"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/ruby/pry.rb", "spec/support/extensions/ruby/pry.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/ruby/typhoeus.rb", "spec/support/extensions/ruby/typhoeus.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/ruby/vcr.rb", "spec/support/extensions/ruby/vcr.rb"
