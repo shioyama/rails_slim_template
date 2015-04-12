@@ -7,6 +7,9 @@ gem "sqlite3"
 gem "rake"
 gem "rails", "~> 4.2"
 
+# Server
+gem "puma"
+
 # Assets
 gem "uglifier"
 gem "slim-rails"
