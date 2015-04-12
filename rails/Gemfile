@@ -40,6 +40,5 @@ group :test do
   gem "vcr"
   gem "launchy" # Allows save_and_open_page to work in Capybara.
   gem "capybara"
-  gem "capybara-extensions"
   gem "poltergeist"
 end
