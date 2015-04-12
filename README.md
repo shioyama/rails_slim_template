@@ -41,8 +41,8 @@ The following highlights what is applied with this template:
 - Adds the [Timecop](https://github.com/jtrupiano/timecop) gem requirement.
 - Adds the [Typhoeus](https://github.com/typhoeus/typhoeus) gem requirement.
 - Adds the [VCR](https://github.com/vcr/vcr) gem requirement.
-- Adds the [Launchy](https://github.com/copiousfreetime/launchy) gem requirement.
 - Adds the [Capybara](https://github.com/jnicklas/capybara) gem requirement.
+- Adds the [Launchy](https://github.com/copiousfreetime/launchy) gem requirement.
 - Adds the [Capybara Extensions](https://github.com/dockyard/capybara-extensions) gem requirement.
 - Adds the [Poltergeist](https://github.com/teampoltergeist/poltergeist) gem requirement.
 - Installs a customized application.html.erb file with a basic site layout.

@@ -3,12 +3,12 @@ source "https://rubygems.org"
 # Databases
 gem "sqlite3"
 
+# Server
+gem "puma"
+
 # Application
 gem "rake"
 gem "rails", "~> 4.2"
-
-# Server
-gem "puma"
 
 # Assets
 gem "uglifier"
@@ -38,7 +38,7 @@ group :test do
   gem "rspec-rails", "~> 3.0"
   gem "climate_control"
   gem "vcr"
-  gem "launchy" # Allows save_and_open_page to work in Capybara.
   gem "capybara"
+  gem "launchy" # Allows save_and_open_page to work in Capybara.
   gem "poltergeist"
 end
