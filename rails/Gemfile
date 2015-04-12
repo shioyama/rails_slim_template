@@ -36,7 +36,6 @@ group :test do
   gem "database_cleaner"
   gem "factory_girl_rails"
   gem "rspec-rails", "~> 3.0"
-  gem "rspec-html-matchers"
   gem "climate_control"
   gem "vcr"
   gem "launchy" # Allows save_and_open_page to work in Capybara.
