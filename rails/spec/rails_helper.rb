@@ -11,5 +11,6 @@ ActiveRecord::Migration.maintain_test_schema!
 RSpec.configure do |config|
   config.include AbstractController::Translation
   config.include ActiveSupport::Testing::TimeHelpers
+  config.include ActiveJob::TestHelper, type: :job
   config.infer_spec_type_from_file_location!
 end
