@@ -82,6 +82,7 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/ruby/vcr.rb", "spec/sup
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/rails/capybara.rb", "spec/support/extensions/rails/capybara.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/rails/database_cleaner.rb", "spec/support/extensions/rails/database_cleaner.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/rails/factory_girl.rb", "spec/support/extensions/rails/factory_girl.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/rails/rake.rb", "spec/support/extensions/rails/rake.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/default_config.rb", "spec/support/kit/default_config.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/garbage_collection.rb", "spec/support/kit/garbage_collection.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/helpers.rb", "spec/support/kit/helpers.rb"
