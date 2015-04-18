@@ -77,7 +77,6 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.txt"
 
 # Specs
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/ruby/pry.rb", "spec/support/extensions/ruby/pry.rb"
-get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/ruby/typhoeus.rb", "spec/support/extensions/ruby/typhoeus.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/ruby/vcr.rb", "spec/support/extensions/ruby/vcr.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/rails/capybara.rb", "spec/support/extensions/rails/capybara.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/rails/database_cleaner.rb", "spec/support/extensions/rails/database_cleaner.rb"

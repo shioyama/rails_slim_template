@@ -36,7 +36,6 @@ group :test do
   gem "rspec-html-matchers"
   gem "climate_control"
   gem "timecop"
-  gem "typhoeus"
   gem "vcr"
   gem "launchy" # Allows save_and_open_page to work in Capybara.
   gem "capybara"
