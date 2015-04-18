@@ -83,7 +83,6 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/rails/database_cleaner.
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/rails/factory_girl.rb", "spec/support/extensions/rails/factory_girl.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/rails/rake.rb", "spec/support/extensions/rails/rake.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/default_config.rb", "spec/support/kit/default_config.rb"
-get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/garbage_collection.rb", "spec/support/kit/garbage_collection.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/helpers.rb", "spec/support/kit/helpers.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/stderr.rb", "spec/support/kit/stderr.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/kit/stdout.rb", "spec/support/kit/stdout.rb"
