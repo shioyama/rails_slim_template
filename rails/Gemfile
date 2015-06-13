@@ -35,7 +35,7 @@ end
 group :test do
   gem "database_cleaner"
   gem "factory_girl_rails"
-  gem "rspec-rails", "~> 3.0"
+  gem "rspec-rails", "~> 3.3"
   gem "climate_control"
   gem "vcr"
   gem "capybara"
