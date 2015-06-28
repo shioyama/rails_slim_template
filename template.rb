@@ -76,6 +76,7 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/README.md", "README.md"
 get "#{SLIM_TEMPLATE_ROOT}/rails/public/humans.txt", "public/humans.txt"
 
 # Specs
+get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/ruby/code_climate.rb", "spec/support/extensions/ruby/code_climate.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/ruby/pry.rb", "spec/support/extensions/ruby/pry.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/ruby/vcr.rb", "spec/support/extensions/ruby/vcr.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/rails/capybara.rb", "spec/support/extensions/rails/capybara.rb"
