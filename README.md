@@ -5,6 +5,23 @@
 Bootstraps a Ruby on Rails project with the minimum essentials to get started which is less than what is provided with
 the `rails new <app name>` defaults. This template is best applied when creating a new Ruby on Rails application.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+# Table of Contents
+
+- [Features](#features)
+- [Requirements](#requirements)
+- [Usage](#usage)
+- [Setup](#setup)
+- [Versioning](#versioning)
+- [Code of Conduct](#code-of-conduct)
+- [Contributions](#contributions)
+- [License](#license)
+- [History](#history)
+- [Credits](#credits)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Features
 
 The following highlights what is applied with this template:
