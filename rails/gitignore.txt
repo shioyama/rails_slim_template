@@ -8,9 +8,6 @@ coverage
 config/*.yml
 !config/secrets.yml
 db/*.sqlite3
-public/stylesheets/**/*
-spec/reports
-spec/temp
 log/*
 tmp/*
 
