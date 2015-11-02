@@ -35,6 +35,10 @@ group :development, :test do
   gem "rubocop", require: false
 end
 
+group :development do
+  gem "milestoner"
+end
+
 group :test do
   gem "database_cleaner"
   gem "factory_girl_rails"
