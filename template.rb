@@ -1,5 +1,5 @@
 SLIM_TEMPLATE_NAME = "Rails Slim Template"
-SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/master"
+SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/release"
 
 # Ruby Version Management
 get "#{SLIM_TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
@@ -21,6 +21,7 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
 application_delta = "config/application.delta.rb"
 get("#{SLIM_TEMPLATE_ROOT}/rails/config/application.delta.rb", application_delta)
 insert_into_file "config/application.rb", open(application_delta).read, after: "  # config.i18n.default_locale = :de\n"
+insert_into_file "config/application.rb", "  # The application configuration.\n", before: "  class Application < Rails::Application\n"
 remove_file application_delta
 gsub_file "config/application.rb", /# config.time_zone = \'Central Time \(US & Canada\)\'/, "config.time_zone = \"UTC\""
 gsub_file "config/application.rb", /# config.i18n.default_locale = :de/, "config.i18n.default_locale = :en"
@@ -46,6 +47,7 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/env.txt", ".env"
 run "echo \"SECRET_KEY_BASE=$(bin/rake secret)\" >> .env"
 
 # Controllers
+insert_into_file "app/controllers/application_controller.rb", "# The application controller.\n", before: "class ApplicationController < ActionController::Base\n"
 insert_into_file "app/controllers/application_controller.rb", "  helper :all\n", after: "class ApplicationController < ActionController::Base\n"
 get "#{SLIM_TEMPLATE_ROOT}/rails/app/controllers/home_controller.rb", "app/controllers/home_controller.rb"
 
@@ -91,6 +93,10 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/spec/rails_helper.rb", "spec/rails_helper.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/spec_helper.rb", "spec/spec_helper.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/javascripts/support/jasmine.yml", "spec/javascripts/support/jasmine.yml"
 create_file "spec/factories.rb"
+
+# Code Quality
+get "#{SLIM_TEMPLATE_ROOT}/rails/rubocop.yml", ".rubocop.yml"
+run "rubocop --auto-correct > /dev/null"
 
 # Git
 git :init
