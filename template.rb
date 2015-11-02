@@ -95,8 +95,12 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/spec/javascripts/support/jasmine.yml", "spec/ja
 create_file "spec/factories.rb"
 
 # Code Quality
+get "#{SLIM_TEMPLATE_ROOT}/rails/lib/tasks/rubocop.rake", "lib/tasks/rubocop.rake"
 get "#{SLIM_TEMPLATE_ROOT}/rails/rubocop.yml", ".rubocop.yml"
 run "rubocop --auto-correct > /dev/null"
+
+# Rake
+get "#{SLIM_TEMPLATE_ROOT}/rails/Rakefile", "Rakefile"
 
 # Git
 git :init

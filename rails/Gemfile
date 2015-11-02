@@ -29,6 +29,7 @@ group :development, :test do
   gem "hirb"
   gem "awesome_print"
   gem "priscilla"
+  gem "rspec-rails", "~> 3.3"
   gem "jasmine"
   gem "jasmine-jquery-rails"
   gem "rubocop", require: false
@@ -37,7 +38,6 @@ end
 group :test do
   gem "database_cleaner"
   gem "factory_girl_rails"
-  gem "rspec-rails", "~> 3.3"
   gem "climate_control"
   gem "vcr"
   gem "capybara"
