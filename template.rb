@@ -6,7 +6,7 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
 
 # Bundler
 get "#{SLIM_TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
-run "bundle install"
+run "bundle install --quiet"
 generate "rspec:install --skip"
 generate "jasmine:install"
 
