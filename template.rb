@@ -52,8 +52,8 @@ insert_into_file "app/controllers/application_controller.rb", "  helper :all\n",
 get "#{SLIM_TEMPLATE_ROOT}/rails/app/controllers/home_controller.rb", "app/controllers/home_controller.rb"
 
 # Routes
-route "resource :home, controller: \"home\""
-route "root \"home#show\""
+route %(resource :home, controller: "home", only: :show)
+route %(root "home#show")
 
 # Helpers
 remove_file "app/helpers/application_helper.rb"
@@ -96,6 +96,7 @@ create_file "spec/factories.rb"
 
 # Code Quality
 get "#{SLIM_TEMPLATE_ROOT}/rails/lib/tasks/rubocop.rake", "lib/tasks/rubocop.rake"
+get "#{SLIM_TEMPLATE_ROOT}/rails/lib/tasks/rails_best_practices.rake", "lib/tasks/rails_best_practices.rake"
 get "#{SLIM_TEMPLATE_ROOT}/rails/rubocop.yml", ".rubocop.yml"
 run "rubocop --auto-correct > /dev/null"
 
