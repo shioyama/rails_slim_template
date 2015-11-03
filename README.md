@@ -24,6 +24,8 @@ the `rails new <app name>` defaults. This template is best applied when creating
 
 # Features
 
+[![Screenshot](screenshot.png)](https://github.com/bkuhlmann/rails_slim_template)
+
 The following highlights what is applied with this template:
 
 - Uses [Ruby 2.2.x](http://www.ruby-lang.org).
