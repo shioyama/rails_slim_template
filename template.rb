@@ -103,9 +103,9 @@ run "rubocop --auto-correct > /dev/null"
 get "#{SLIM_TEMPLATE_ROOT}/rails/Rakefile", "Rakefile"
 
 # Git
-git :init
+git init: "--quiet"
 get "#{SLIM_TEMPLATE_ROOT}/rails/gitignore.txt", ".gitignore"
-git add: '.', commit: "-n -a -m \"Added the #{SLIM_TEMPLATE_NAME}.\""
+git add: '.', commit: "--all --no-verify --quiet --message \"Added the #{SLIM_TEMPLATE_NAME}.\""
 
 # End
 say_status :end, "#{SLIM_TEMPLATE_NAME} Complete!"
