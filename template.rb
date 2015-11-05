@@ -64,14 +64,19 @@ remove_file "app/views/layouts/application.html.erb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/application.html.slim", "app/views/layouts/application.html.slim"
 get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/home/show.html.slim", "app/views/home/show.html.slim"
 
+# Stylesheets
+remove_file "app/assets/stylesheets/application.css"
+create_file "app/assets/stylesheets/application.scss"
+
+# JavaScripts
+gsub_file "app/assets/javascripts/application.js", /\/\/= require turbolinks\n/, ''
+
 # Images
 remove_file "app/assets/images/rails.png"
 get "#{SLIM_TEMPLATE_ROOT}/rails/public/apple-touch-icon-114x114.png", "public/apple-touch-icon-114x114.png"
 get "#{SLIM_TEMPLATE_ROOT}/rails/public/apple-touch-icon.png", "public/apple-touch-icon.png"
 get "#{SLIM_TEMPLATE_ROOT}/rails/public/favicon.ico", "public/favicon.ico"
 
-# JavaScripts
-gsub_file "app/assets/javascripts/application.js", /\/\/= require turbolinks\n/, ''
 
 # Doc
 remove_file "README.rdoc"
