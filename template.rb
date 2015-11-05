@@ -96,9 +96,11 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/spec/javascripts/support/jasmine.yml", "spec/ja
 create_file "spec/factories.rb"
 
 # Code Quality
-get "#{SLIM_TEMPLATE_ROOT}/rails/lib/tasks/rubocop.rake", "lib/tasks/rubocop.rake"
 get "#{SLIM_TEMPLATE_ROOT}/rails/lib/tasks/rails_best_practices.rake", "lib/tasks/rails_best_practices.rake"
+get "#{SLIM_TEMPLATE_ROOT}/rails/lib/tasks/rubocop.rake", "lib/tasks/rubocop.rake"
+get "#{SLIM_TEMPLATE_ROOT}/rails/lib/tasks/scss.rake", "lib/tasks/scss.rake"
 get "#{SLIM_TEMPLATE_ROOT}/rails/rubocop.yml", ".rubocop.yml"
+get "#{SLIM_TEMPLATE_ROOT}/rails/scss-lint.yml", ".scss-lint.yml"
 run "rubocop --auto-correct > /dev/null"
 
 # Rake

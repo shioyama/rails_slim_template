@@ -34,6 +34,7 @@ group :development, :test do
   gem "jasmine-jquery-rails"
   gem "rubocop", require: false
   gem "rails_best_practices", require: false
+  gem "scss_lint", require: false
 end
 
 group :development do
