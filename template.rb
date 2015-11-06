@@ -18,11 +18,8 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/priscilla.rb", "config/init
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
 
 # Configuration -- Application
-application_delta = "config/application.delta.rb"
-get("#{SLIM_TEMPLATE_ROOT}/rails/config/application.delta.rb", application_delta)
-insert_into_file "config/application.rb", open(application_delta).read, after: "  # config.i18n.default_locale = :de\n"
+insert_into_file "config/application.rb", open("#{SLIM_TEMPLATE_ROOT}/rails/config/application.delta.rb").read, after: "  # config.i18n.default_locale = :de\n"
 insert_into_file "config/application.rb", "  # The application configuration.\n", before: "  class Application < Rails::Application\n"
-remove_file application_delta
 gsub_file "config/application.rb", /# config.time_zone = \'Central Time \(US & Canada\)\'/, "config.time_zone = \"UTC\""
 gsub_file "config/application.rb", /# config.i18n.default_locale = :de/, "config.i18n.default_locale = :en"
 insert_into_file "config/environments/development.rb", "  config.action_mailer.smtp_settings = {address: \"localhost\", port: 1025}\n", after: "  config.action_mailer.raise_delivery_errors = false\n"
