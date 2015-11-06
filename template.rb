@@ -14,10 +14,15 @@ generate "jasmine:install"
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/inflections.rb", "config/initializers/inflections.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/priscilla.rb", "config/initializers/priscilla.rb"
 
-# Configuration -- Database
+# Configuration - Secrets
+get "#{SLIM_TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
+get "#{SLIM_TEMPLATE_ROOT}/rails/env.txt", ".env"
+run "echo \"SECRET_KEY_BASE=$(bin/rake secret)\" >> .env"
+
+# Configuration - Database
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
 
-# Configuration -- Application
+# Configuration - Application
 insert_into_file "config/application.rb", open("#{SLIM_TEMPLATE_ROOT}/rails/config/application.delta.rb").read, after: "  # config.i18n.default_locale = :de\n"
 insert_into_file "config/application.rb", "  # The application configuration.\n", before: "  class Application < Rails::Application\n"
 gsub_file "config/application.rb", /# config.time_zone = \'Central Time \(US & Canada\)\'/, "config.time_zone = \"UTC\""
@@ -25,7 +30,7 @@ gsub_file "config/application.rb", /# config.i18n.default_locale = :de/, "config
 insert_into_file "config/environments/development.rb", "  config.action_mailer.smtp_settings = {address: \"localhost\", port: 1025}\n", after: "  config.action_mailer.raise_delivery_errors = false\n"
 insert_into_file "config/environments/development.rb", "  config.action_mailer.delivery_method = :smtp\n", after: "  config.action_mailer.raise_delivery_errors = false\n"
 
-# Configuration -- Stage
+# Configuration - Stage
 run "cp config/environments/production.rb config/environments/stage.rb"
 
 # Configuration - Development
@@ -39,10 +44,9 @@ uncomment_lines "config/environments/test.rb", /config.action_view.raise_on_miss
 insert_into_file "config/environments/test.rb", "\n  # Raise error when receiving unauthorized parameters.\n", after: "config.action_controller.allow_forgery_protection = false\n"
 insert_into_file "config/environments/test.rb", "  config.action_controller.action_on_unpermitted_parameters = :raise\n", after: "# Raise error when receiving unauthorized parameters.\n"
 
-# Configuration -- Secrets
-get "#{SLIM_TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
-get "#{SLIM_TEMPLATE_ROOT}/rails/env.txt", ".env"
-run "echo \"SECRET_KEY_BASE=$(bin/rake secret)\" >> .env"
+# Configuration - Puma
+get "#{SLIM_TEMPLATE_ROOT}/rails/config/puma.rb", "config/puma.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/Procfile", "Procfile"
 
 # Controllers
 insert_into_file "app/controllers/application_controller.rb", "# The application controller.\n", before: "class ApplicationController < ActionController::Base\n"
