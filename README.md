@@ -30,7 +30,8 @@ The following highlights what is applied with this template:
 
 - Uses [Ruby 2.2.x](http://www.ruby-lang.org).
 - Uses [Ruby on Rails 4.2.x](http://rubyonrails.org).
-- Adds the [SQLite3](https://www.sqlite.org) gem.
+- Adds the [SQLite3](https://www.sqlite.org) gem requirement.
+- Adds the [Puma](http://puma.io) gem requirement.
 - Adds the [Rake](https://github.com/jimweirich/rake) gem requirement.
 - Adds the [Ruby on Rails](http://rubyonrails.org) gem requirement.
 - Adds the [Uglifier](https://github.com/lautis/uglifier) gem requirement.
@@ -41,6 +42,7 @@ The following highlights what is applied with this template:
 - Adds the [Pry](https://github.com/pry/pry) gem requirement.
 - Adds the [Pry ByeBug](https://github.com/deivid-rodriguez/pry-byebug) gem requirement.
 - Adds the [Pry Remote](https://github.com/Mon-Ouie/pry-remote) gem requirement.
+- Adds the [Pry State](https://github.com/SudhagarS/pry-state) gem requirement.
 - Adds the [Pry Rescue](https://github.com/ConradIrwin/pry-rescue) gem requirement.
 - Adds the [Pry Stack Explorer](https://github.com/pry/pry-stack_explorer) gem requirement.
 - Adds the [Bond](https://github.com/cldwalker/bond) gem requirement.
@@ -48,22 +50,21 @@ The following highlights what is applied with this template:
 - Adds the [Hirb](https://github.com/cldwalker/hirb) gem requirement.
 - Adds the [Awesome Print](https://github.com/michaeldv/awesome_print) gem requirement.
 - Adds the [Priscilla](https://github.com/Arkham/priscilla) gem requirement.
+- Adds the [RSpec Rails](https://github.com/dchelimsky/rspec-rails) gem requirement.
 - Adds the [Jasmine](http://jasmine.github.io) gem requirement.
 - Adds the [Jasmine jQuery Rails](https://github.com/travisjeffery/jasmine-jquery-rails) gem requirement.
-- Adds the [Spring](https://github.com/rails/spring) gem requirement.
-- Adds the [Spring Commands RSpec](https://github.com/jonleighton/spring-commands-rspec) gem requirement.
+- Adds the [Rubocop](https://github.com/bbatsov/rubocop) gem requirement.
+- Adds the [Rails Best Practices](http://rails-bestpractices.com) gem requirement.
+- Adds the [SCSS Lint](https://github.com/brigade/scss-lint) gem requirement.
+- Adds the [Milestoner](https://github.com/bkuhlmann/milestoner) gem requirement.
 - Adds the [Database Cleaner](https://github.com/bmabey/database_cleaner) gem requirement.
 - Adds the [Factory Girl Rails](https://github.com/thoughtbot/factory_girl_rails) gem requirement.
-- Adds the [RSpec Rails](https://github.com/dchelimsky/rspec-rails) gem requirement.
-- Adds the [RSpec HTML Matchers](https://github.com/kucaahbe/rspec-html-matchers) gem requirement.
 - Adds the [Climate Control](https://github.com/thoughtbot/climate_control) gem requirement.
-- Adds the [Timecop](https://github.com/jtrupiano/timecop) gem requirement.
-- Adds the [Typhoeus](https://github.com/typhoeus/typhoeus) gem requirement.
 - Adds the [VCR](https://github.com/vcr/vcr) gem requirement.
 - Adds the [Capybara](https://github.com/jnicklas/capybara) gem requirement.
 - Adds the [Launchy](https://github.com/copiousfreetime/launchy) gem requirement.
-- Adds the [Capybara Extensions](https://github.com/dockyard/capybara-extensions) gem requirement.
 - Adds the [Poltergeist](https://github.com/teampoltergeist/poltergeist) gem requirement.
+- Adds the [Code Climate](https://github.com/codeclimate/ruby-test-reporter) gem requirement.
 - Installs a customized application.html.erb file with a basic site layout.
 - Installs customized application graphics.
 - Installs customized generator defaults.
@@ -84,7 +85,7 @@ Open a terminal window and execute one the following command lines depending on 
 
 Current Version (stable):
 
-    rails new demo -d sqlite3 -T -f --skip-bundle -m https://raw.github.com/bkuhlmann/rails_slim_template/v3.0.0/template.rb
+    rails new demo -d sqlite3 -T -f --skip-bundle -m https://raw.github.com/bkuhlmann/rails_slim_template/v4.0.0/template.rb
 
 Master Version (unstable):
 
@@ -108,7 +109,6 @@ After the template has been applied, you'll want to tweak the following files:
 - public/apple-touch-icon-114x114.png = Replace with your own custom image.
 - public/apple-touch-icon.png = Replace with your own custom image.
 - public/favicon.ico = Replace with your own custom icon.
-- public/humans.txt = Replace with your own info.
 
 # Versioning
 
