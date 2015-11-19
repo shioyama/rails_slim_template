@@ -5,8 +5,8 @@
 Bootstraps a Ruby on Rails project with the minimum essentials to get started which is less than what is provided with
 the `rails new <app name>` defaults. This template is best applied when creating a new Ruby on Rails application.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- Tocer[start]: Auto-generated, don't remove. -->
+
 # Table of Contents
 
 - [Features](#features)
@@ -20,7 +20,7 @@ the `rails new <app name>` defaults. This template is best applied when creating
 - [History](#history)
 - [Credits](#credits)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!-- Tocer[finish]: Auto-generated, don't remove. -->
 
 # Features
 
