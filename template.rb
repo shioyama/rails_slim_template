@@ -80,7 +80,6 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/public/apple-touch-icon-114x114.png", "public/a
 get "#{SLIM_TEMPLATE_ROOT}/rails/public/apple-touch-icon.png", "public/apple-touch-icon.png"
 get "#{SLIM_TEMPLATE_ROOT}/rails/public/favicon.ico", "public/favicon.ico"
 
-
 # Doc
 remove_file "README.rdoc"
 get "#{SLIM_TEMPLATE_ROOT}/rails/README.md", "README.md"
@@ -113,6 +112,9 @@ run "rubocop --auto-correct > /dev/null"
 
 # Rake
 get "#{SLIM_TEMPLATE_ROOT}/rails/Rakefile", "Rakefile"
+
+# Pragma
+run %(pragmater --add . -c "# frozen_string_literal: true")
 
 # Git
 git init: "--quiet"

@@ -38,6 +38,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "pragmater"
   gem "tocer"
   gem "milestoner"
 end
