@@ -84,6 +84,7 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/public/favicon.ico", "public/favicon.ico"
 # Doc
 remove_file "README.rdoc"
 get "#{SLIM_TEMPLATE_ROOT}/rails/README.md", "README.md"
+run "tocer --generate README.md"
 
 # Specs
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/extensions/ruby/pry.rb", "spec/support/extensions/ruby/pry.rb"
