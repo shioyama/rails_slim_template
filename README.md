@@ -56,6 +56,8 @@ The following highlights what is applied with this template:
 - Adds the [Rubocop](https://github.com/bbatsov/rubocop) gem requirement.
 - Adds the [Rails Best Practices](http://rails-bestpractices.com) gem requirement.
 - Adds the [SCSS Lint](https://github.com/brigade/scss-lint) gem requirement.
+- Adds the [Pragmater](https://github.com/bkuhlmann/pragmater) gem requirement.
+- Adds the [Tocer](https://github.com/bkuhlmann/tocer) gem requirement.
 - Adds the [Milestoner](https://github.com/bkuhlmann/milestoner) gem requirement.
 - Adds the [Database Cleaner](https://github.com/bmabey/database_cleaner) gem requirement.
 - Adds the [Factory Girl Rails](https://github.com/thoughtbot/factory_girl_rails) gem requirement.
@@ -85,7 +87,7 @@ Open a terminal window and execute one the following command lines depending on 
 
 Current Version (stable):
 
-    rails new demo -d sqlite3 -T -f --skip-bundle -m https://raw.github.com/bkuhlmann/rails_slim_template/v4.0.0/template.rb
+    rails new demo -d sqlite3 -T -f --skip-bundle -m https://raw.github.com/bkuhlmann/rails_slim_template/v4.1.0/template.rb
 
 Master Version (unstable):
 
@@ -139,4 +141,4 @@ Built with [Gemsmith](https://github.com/bkuhlmann/gemsmith).
 
 # Credits
 
-Developed by [Brooke Kuhlmann](https://www.alchemists.io) at [Alchemists](https://www.alchemists.io)
+Developed by [Brooke Kuhlmann](https://www.alchemists.io) at [Alchemists](https://www.alchemists.io).

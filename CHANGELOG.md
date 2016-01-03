@@ -1,3 +1,11 @@
+# v4.1.0 (2016-01-02)
+
+- Added [Pragmater](https://github.com/bkuhlmann/pragmater) support.
+- Added [Tocer](https://github.com/bkuhlmann/tocer) support.
+- Updated README with Tocer generated Table of Contents.
+- Updated template to use "release" branch.
+- Updated to Ruby 2.3.0.
+
 # v4.0.0 (2015-11-06)
 
 - Fixed Factory Girl reloading so it only happens before a suite.

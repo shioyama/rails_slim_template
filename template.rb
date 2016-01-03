@@ -1,7 +1,7 @@
 require "open-uri"
 
 SLIM_TEMPLATE_NAME = "Rails Slim Template"
-SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/release"
+SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/v4.1.0"
 
 # Ruby Version Management
 get "#{SLIM_TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
