@@ -11,6 +11,8 @@ Style/SingleLineBlockParams:
   Enabled: false
 Style/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 Metrics/LineLength:
