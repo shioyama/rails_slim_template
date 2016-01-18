@@ -1,7 +1,7 @@
 require "open-uri"
 
 SLIM_TEMPLATE_NAME = "Rails Slim Template"
-SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/v4.1.0"
+SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/release"
 
 # Ruby Version Management
 get "#{SLIM_TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
@@ -114,7 +114,7 @@ run "rubocop --auto-correct > /dev/null"
 get "#{SLIM_TEMPLATE_ROOT}/rails/Rakefile", "Rakefile"
 
 # Pragma
-run %(pragmater --add . -c "# frozen_string_literal: true")
+# run %(pragmater --add . -c "# frozen_string_literal: true")
 
 # Git
 git init: "--quiet"
