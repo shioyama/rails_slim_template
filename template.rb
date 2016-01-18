@@ -119,7 +119,7 @@ run %(pragmater --add . --comments "# frozen_string_literal: true" --whitelist "
 # Git
 git init: "--quiet"
 get "#{SLIM_TEMPLATE_ROOT}/rails/gitignore.txt", ".gitignore"
-git add: ".", commit: %(--all --no-verify --quiet --message "Added the #{SLIM_TEMPLATE_NAME}.")
+git add: ".", commit: %(--all --no-verify --quiet --message "Added #{SLIM_TEMPLATE_NAME}.")
 
 # End
 say_status :end, "#{SLIM_TEMPLATE_NAME} Complete!"
