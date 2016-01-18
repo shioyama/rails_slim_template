@@ -114,12 +114,12 @@ run "rubocop --auto-correct > /dev/null"
 get "#{SLIM_TEMPLATE_ROOT}/rails/Rakefile", "Rakefile"
 
 # Pragma
-# run %(pragmater --add . -c "# frozen_string_literal: true")
+run %(pragmater --add . --comments "# frozen_string_literal: true" --whitelist ".rb")
 
 # Git
 git init: "--quiet"
 get "#{SLIM_TEMPLATE_ROOT}/rails/gitignore.txt", ".gitignore"
-git add: '.', commit: "--all --no-verify --quiet --message \"Added the #{SLIM_TEMPLATE_NAME}.\""
+git add: ".", commit: %(--all --no-verify --quiet --message "Added the #{SLIM_TEMPLATE_NAME}.")
 
 # End
 say_status :end, "#{SLIM_TEMPLATE_NAME} Complete!"
