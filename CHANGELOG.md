@@ -1,3 +1,10 @@
+# v4.2.0 (2016-01-18)
+
+- Added Pragmater whitelist to template.
+- Added Rubocop Style/StringLiteralsInInterpolation setting.
+- Removed RSpec default monkey patching behavior.
+- Removed unnecessary words from Git commit message.
+
 # v4.1.0 (2016-01-02)
 
 - Added [Pragmater](https://github.com/bkuhlmann/pragmater) support.
