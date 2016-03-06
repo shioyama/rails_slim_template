@@ -28,7 +28,6 @@ group :development, :test do
   gem "wirb"
   gem "hirb"
   gem "awesome_print"
-  gem "priscilla"
   gem "rspec-rails", "~> 3.3"
   gem "jasmine"
   gem "jasmine-jquery-rails"
