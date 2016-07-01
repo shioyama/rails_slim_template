@@ -8,7 +8,7 @@ gem "puma"
 
 # Application
 gem "rake", "~> 11.0"
-gem "rails", "~> 4.2"
+gem "rails", "~> 5.0"
 
 # Assets
 gem "uglifier"
@@ -25,10 +25,10 @@ group :development, :test do
   gem "wirb"
   gem "hirb"
   gem "awesome_print"
-  gem "rspec-rails", "~> 3.4"
+  gem "rspec-rails", "~> 3.5"
   gem "jasmine"
   gem "jasmine-jquery-rails"
-  gem "rubocop", "~> 0.40", require: false
+  gem "rubocop", "~> 0.41", require: false
   gem "rails_best_practices", require: false
   gem "scss_lint", require: false
 end
