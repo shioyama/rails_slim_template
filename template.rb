@@ -29,17 +29,15 @@ run "echo \"SECRET_KEY_BASE=$(bin/rake secret)\" >> .env"
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
 
 # Configuration - Application
-insert_into_file "config/application.rb", open("#{SLIM_TEMPLATE_ROOT}/rails/config/application.delta.rb").read, after: "  # config.i18n.default_locale = :de\n"
 insert_into_file "config/application.rb", "  # The application configuration.\n", before: "  class Application < Rails::Application\n"
-gsub_file "config/application.rb", /# config.time_zone = \'Central Time \(US & Canada\)\'/, "config.time_zone = \"UTC\""
-gsub_file "config/application.rb", /# config.i18n.default_locale = :de/, "config.i18n.default_locale = :en"
-insert_into_file "config/environments/development.rb", "  config.action_mailer.smtp_settings = {address: \"localhost\", port: 1025}\n", after: "  config.action_mailer.raise_delivery_errors = false\n"
-insert_into_file "config/environments/development.rb", "  config.action_mailer.delivery_method = :smtp\n", after: "  config.action_mailer.raise_delivery_errors = false\n"
+insert_into_file "config/application.rb", open("#{SLIM_TEMPLATE_ROOT}/rails/config/application.delta.rb").read, after: "    # -- all .rb files in that directory are automatically loaded.\n"
 
 # Configuration - Stage
 run "cp config/environments/production.rb config/environments/stage.rb"
 
 # Configuration - Development
+insert_into_file "config/environments/development.rb", "  config.action_mailer.smtp_settings = {address: \"localhost\", port: 1025}\n", after: "  config.action_mailer.raise_delivery_errors = false\n"
+insert_into_file "config/environments/development.rb", "  config.action_mailer.delivery_method = :smtp\n", after: "  config.action_mailer.raise_delivery_errors = false\n"
 uncomment_lines "config/environments/development.rb", /config.action_view.raise_on_missing_translations/
 insert_into_file "config/environments/development.rb", "\n  # Raise error when receiving unauthorized parameters.\n", after: "config.action_controller.perform_caching = false\n"
 insert_into_file "config/environments/development.rb", "  config.action_controller.action_on_unpermitted_parameters = :raise\n", after: "# Raise error when receiving unauthorized parameters.\n"
