@@ -52,11 +52,6 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/Procfile", "Procfile"
 # Controllers
 insert_into_file "app/controllers/application_controller.rb", "# The application controller.\n", before: "class ApplicationController < ActionController::Base\n"
 insert_into_file "app/controllers/application_controller.rb", "  helper :all\n", after: "class ApplicationController < ActionController::Base\n"
-get "#{SLIM_TEMPLATE_ROOT}/rails/app/controllers/home_controller.rb", "app/controllers/home_controller.rb"
-
-# Routes
-route %(resource :home, controller: "home", only: :show)
-route %(root "home#show")
 
 # Helpers
 remove_file "app/helpers/application_helper.rb"
@@ -64,7 +59,6 @@ remove_file "app/helpers/application_helper.rb"
 # Views
 remove_file "app/views/layouts/application.html.erb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/application.html.slim", "app/views/layouts/application.html.slim"
-get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/home/show.html.slim", "app/views/home/show.html.slim"
 
 # Stylesheets
 remove_file "app/assets/stylesheets/application.css"
