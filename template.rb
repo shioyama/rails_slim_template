@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "open-uri"
 
 SLIM_TEMPLATE_NAME = "Rails Slim Template"
@@ -52,6 +54,10 @@ insert_into_file "config/environments/test.rb", "\n  config.log_level = :fatal\n
 # Configuration - Puma
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/puma.rb", "config/puma.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/Procfile", "Procfile"
+
+# Bin
+get "#{SLIM_TEMPLATE_ROOT}/rails/bin/setup", "bin/setup"
+run "cp bin/setup bin/update"
 
 # Controllers
 insert_into_file "app/controllers/application_controller.rb", "# The application controller.\n", before: "class ApplicationController < ActionController::Base\n"
