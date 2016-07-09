@@ -63,6 +63,12 @@ remove_file "app/helpers/application_helper.rb"
 remove_file "app/views/layouts/application.html.erb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/application.html.slim", "app/views/layouts/application.html.slim"
 
+# Models
+insert_into_file "app/models/application_record.rb", "# The application record.\n", before: "class ApplicationRecord < ActiveRecord::Base\n"
+
+# Mailers
+insert_into_file "app/mailers/application_mailer.rb", "# The application mailer.\n", before: "class ApplicationMailer < ActionMailer::Base\n"
+
 # Stylesheets
 remove_file "app/assets/stylesheets/application.css"
 create_file "app/assets/stylesheets/application.scss"
