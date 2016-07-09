@@ -1,16 +1,14 @@
 # Git Ignore File
 
-# Rails
-.bundle
-.config
-.rspec
-coverage
-config/*.yml
-!config/secrets.yml
-db/*.sqlite3
-log/*
-tmp/*
+# Bundler
+/.bundle
 
-# YARD
-.yardoc
-_yardoc
+# Rails
+/.config
+/config/*.yml
+!/config/secrets.yml
+/log/*
+/tmp/*
+
+# RSpec
+.rspec
