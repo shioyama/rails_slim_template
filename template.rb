@@ -12,6 +12,9 @@ run "bundle install --quiet"
 generate "rspec:install --skip"
 generate "jasmine:install"
 
+# Rails Version Check
+say_status(:error, "Invalid Rails version, use Rails 5.x.x.", :red) and abort unless `rails -v`.match(/Rails\s5.+/)
+
 # Configuration - Initializers
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/inflections.rb", "config/initializers/inflections.rb"
 
