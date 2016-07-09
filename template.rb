@@ -61,7 +61,11 @@ remove_file "app/helpers/application_helper.rb"
 
 # Views
 remove_file "app/views/layouts/application.html.erb"
+remove_file "app/views/layouts/mailer.html.erb"
+remove_file "app/views/layouts/mailer.text.erb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/application.html.slim", "app/views/layouts/application.html.slim"
+get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/mailer.html.slim", "app/views/layouts/mailer.html.slim"
+get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/mailer.text.slim", "app/views/layouts/mailer.text.slim"
 
 # Models
 insert_into_file "app/models/application_record.rb", "# The application record.\n", before: "class ApplicationRecord < ActiveRecord::Base\n"
