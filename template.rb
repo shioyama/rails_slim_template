@@ -103,7 +103,7 @@ run "rubocop --auto-correct > /dev/null"
 get "#{SLIM_TEMPLATE_ROOT}/rails/Rakefile", "Rakefile"
 
 # Pragma
-run %(pragmater --add . --comments "# frozen_string_literal: true" --whitelist ".rb")
+run %(pragmater --add . --comments "# frozen_string_literal: true" --whitelist "Gemfile" "Guardfile" "Rakefile" "config.ru" "bin/**/*" ".gemspec" ".rake" ".rb")
 
 # Git
 git init: "--quiet"
