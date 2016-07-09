@@ -78,6 +78,12 @@ remove_file "README.rdoc"
 get "#{SLIM_TEMPLATE_ROOT}/rails/README.md", "README.md"
 run "tocer --generate README.md"
 
+# Lib
+remove_dir "lib/assets"
+
+# Vendor
+remove_dir "vendor"
+
 # Specs
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/shared_contexts/temp_dir.rb", "spec/support/shared_contexts/temp_dir.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/rails_helper.rb", "spec/rails_helper.rb"
