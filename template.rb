@@ -49,6 +49,7 @@ gsub_file "config/environments/development.rb", /config\.assets\.debug\s=\strue/
 uncomment_lines "config/environments/test.rb", /config.action_view.raise_on_missing_translations/
 insert_into_file "config/environments/test.rb", "\n  # Raise error when receiving unauthorized parameters.\n", after: "config.action_controller.allow_forgery_protection = false\n"
 insert_into_file "config/environments/test.rb", "  config.action_controller.action_on_unpermitted_parameters = :raise\n", after: "# Raise error when receiving unauthorized parameters.\n"
+insert_into_file "config/environments/test.rb", "  config.cache_store = :null_store\n", after: "config.action_controller.perform_caching = false\n"
 insert_into_file "config/environments/test.rb", "\n  config.log_level = :fatal\n", after: "config.action_view.raise_on_missing_translations = true\n"
 
 # Configuration - Puma
