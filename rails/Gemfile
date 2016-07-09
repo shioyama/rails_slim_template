@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Databases
-gem "sqlite3"
+gem "pg", "~> 0.18"
 
 # Server
 gem "puma"
