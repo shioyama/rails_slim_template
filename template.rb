@@ -81,10 +81,10 @@ insert_into_file "app/mailers/application_mailer.rb", "# The application mailer.
 
 # Stylesheets
 remove_file "app/assets/stylesheets/application.css"
-create_file "app/assets/stylesheets/application.scss"
+get "#{SLIM_TEMPLATE_ROOT}/rails/app/assets/stylesheets/application.scss", "app/assets/stylesheets/application.scss"
 
 # JavaScripts
-gsub_file "app/assets/javascripts/application.js", /\/\/= require turbolinks\n/, ''
+get "#{SLIM_TEMPLATE_ROOT}/rails/app/assets/javascripts/application.js", "app/assets/javascripts/application.js"
 
 # Images
 remove_file "app/assets/images/rails.png"
