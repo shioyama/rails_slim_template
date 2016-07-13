@@ -85,6 +85,8 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/app/assets/stylesheets/application.scss", "app/
 
 # JavaScripts
 get "#{SLIM_TEMPLATE_ROOT}/rails/app/assets/javascripts/application.js", "app/assets/javascripts/application.js"
+gsub_file "app/assets/javascripts/cable.js", "//= require_tree ./channels\n", ""
+remove_dir "app/assets/javascripts/channels"
 
 # Images
 remove_file "app/assets/images/rails.png"
