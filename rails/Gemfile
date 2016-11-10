@@ -28,7 +28,7 @@ group :development, :test do
   gem "rspec-rails", "~> 3.5"
   gem "jasmine"
   gem "jasmine-jquery-rails"
-  gem "rubocop", "~> 0.41", require: false
+  gem "rubocop", "~> 0.45", require: false
   gem "rails_best_practices", require: false
   gem "scss_lint", require: false
 end
