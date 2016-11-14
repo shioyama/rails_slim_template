@@ -58,6 +58,12 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/Procfile", "Procfile"
 get "#{SLIM_TEMPLATE_ROOT}/rails/bin/setup", "bin/setup"
 run "cp bin/setup bin/update"
 
+# Channels
+insert_into_file "app/channels/application_cable/channel.rb", "  # The application channel.\n", after: "module ApplicationCable\n"
+gsub_file "app/channels/application_cable/channel.rb", /\s{4}end\n/, "  end"
+insert_into_file "app/channels/application_cable/connection.rb", "  # The application connection.\n", after: "module ApplicationCable\n"
+gsub_file "app/channels/application_cable/connection.rb", /\s{4}end\n/, "  end"
+
 # Controllers
 insert_into_file "app/controllers/application_controller.rb", "# The application controller.\n", before: "class ApplicationController < ActionController::Base\n"
 insert_into_file "app/controllers/application_controller.rb", "  helper :all\n", after: "class ApplicationController < ActionController::Base\n"
