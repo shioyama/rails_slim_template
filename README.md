@@ -2,8 +2,9 @@
 
 [![Patreon](https://img.shields.io/badge/patreon-donate-brightgreen.svg)](https://www.patreon.com/bkuhlmann)
 
-Bootstraps a Ruby on Rails project with the minimum essentials to get started which is less than what is provided with
-the `rails new <app name>` defaults. This template is best applied when creating a new Ruby on Rails application.
+Bootstraps a Ruby on Rails project with the minimum essentials to get started which is less than
+what is provided with the `rails new <app name>` defaults. This template is best applied when
+creating a new Ruby on Rails application.
 
 <!-- Tocer[start]: Auto-generated, don't remove. -->
 
@@ -28,9 +29,9 @@ the `rails new <app name>` defaults. This template is best applied when creating
 
 The following highlights what is applied with this template:
 
-- Uses [Ruby 2.2.x](http://www.ruby-lang.org).
-- Uses [Ruby on Rails 4.2.x](http://rubyonrails.org).
-- Adds the [SQLite3](https://www.sqlite.org) gem requirement.
+- Uses [Ruby 2.3.x](http://www.ruby-lang.org).
+- Uses [Ruby on Rails 5.0.x](http://rubyonrails.org).
+- Adds the [PG](https://bitbucket.org/ged/ruby-pg/wiki/Home) gem requirement.
 - Adds the [Puma](http://puma.io) gem requirement.
 - Adds the [Rake](https://github.com/jimweirich/rake) gem requirement.
 - Adds the [Ruby on Rails](http://rubyonrails.org) gem requirement.
@@ -41,25 +42,22 @@ The following highlights what is applied with this template:
 - Adds the [Dotenv Rails](https://github.com/bkeepers/dotenv) gem requirement.
 - Adds the [Pry](https://github.com/pry/pry) gem requirement.
 - Adds the [Pry ByeBug](https://github.com/deivid-rodriguez/pry-byebug) gem requirement.
-- Adds the [Pry Remote](https://github.com/Mon-Ouie/pry-remote) gem requirement.
 - Adds the [Pry State](https://github.com/SudhagarS/pry-state) gem requirement.
-- Adds the [Pry Rescue](https://github.com/ConradIrwin/pry-rescue) gem requirement.
-- Adds the [Pry Stack Explorer](https://github.com/pry/pry-stack_explorer) gem requirement.
 - Adds the [Bond](https://github.com/cldwalker/bond) gem requirement.
 - Adds the [Wirb](https://github.com/janlelis/wirb) gem requirement.
 - Adds the [Hirb](https://github.com/cldwalker/hirb) gem requirement.
 - Adds the [Awesome Print](https://github.com/michaeldv/awesome_print) gem requirement.
-- Adds the [Priscilla](https://github.com/Arkham/priscilla) gem requirement.
 - Adds the [RSpec Rails](https://github.com/dchelimsky/rspec-rails) gem requirement.
 - Adds the [Jasmine](http://jasmine.github.io) gem requirement.
 - Adds the [Jasmine jQuery Rails](https://github.com/travisjeffery/jasmine-jquery-rails) gem requirement.
+- Adds the [Reek](https://github.com/troessner/reek) gem requirement.
 - Adds the [Rubocop](https://github.com/bbatsov/rubocop) gem requirement.
 - Adds the [Rails Best Practices](http://rails-bestpractices.com) gem requirement.
 - Adds the [SCSS Lint](https://github.com/brigade/scss-lint) gem requirement.
+- Adds the [Listen](https://github.com/guard/listen) gem requirement.
 - Adds the [Pragmater](https://github.com/bkuhlmann/pragmater) gem requirement.
 - Adds the [Tocer](https://github.com/bkuhlmann/tocer) gem requirement.
 - Adds the [Milestoner](https://github.com/bkuhlmann/milestoner) gem requirement.
-- Adds the [Database Cleaner](https://github.com/bmabey/database_cleaner) gem requirement.
 - Adds the [Factory Girl Rails](https://github.com/thoughtbot/factory_girl_rails) gem requirement.
 - Adds the [Climate Control](https://github.com/thoughtbot/climate_control) gem requirement.
 - Adds the [VCR](https://github.com/vcr/vcr) gem requirement.
@@ -83,26 +81,20 @@ The following highlights what is applied with this template:
 
 # Usage
 
-Open a terminal window and execute one the following command lines depending on your version preference:
+Open a terminal window and execute one the following command lines depending on your version
+preference:
 
 Current Version (stable):
 
-    rails new demo -d sqlite3 -T -f --skip-bundle -m https://raw.github.com/bkuhlmann/rails_slim_template/v4.2.0/template.rb
+    rails new demo --skip-git --skip-gemfile --skip-bundle --skip-test --skip-spring --skip-turbolinks --skip-puma --skip-keeps --force --database postgresql --template https://raw.github.com/bkuhlmann/rails_slim_template/v5.0.0/template.rb
 
 Master Version (unstable):
 
-    rails new demo -d sqlite3 -T -f --skip-bundle -m https://raw.github.com/bkuhlmann/rails_slim_template/master/template.rb
+    rails new demo --skip-git --skip-gemfile --skip-bundle --skip-test --skip-spring --skip-turbolinks --skip-puma --skip-keeps --force --database postgresql --template https://raw.github.com/bkuhlmann/rails_slim_template/master/template.rb
 
-Here is what each option is doing and why:
-
-    -d: Specifies the SQLite3 database for quick and easy setup.
-    -T: Skips setting up Test::Unit files since RSpec is what we want.
-    -f: Forces overwrite of any existing files so the template is not interrupted during setup.
-    --skip-bundle: Skips running "bundle install" since the template does this for you at appropriate time of setup.
-    -m: The template file to execute.
-
-*TIP*: You can reduce unnecessary typing with new app generation by adding the new rails options, listed above,
-to your .railsrc file. Any options in the .railsrc file will be applied with each new app generation.
+*TIP*: You can reduce unnecessary typing with new app generation by adding the new rails options,
+listed above, to your `.railsrc` file. Any options in the .railsrc file will be applied with each
+new app generation.
 
 # Setup
 
@@ -122,8 +114,8 @@ Read [Semantic Versioning](http://semver.org) for details. Briefly, it means:
 
 # Code of Conduct
 
-Please note that this project is released with a [CODE OF CONDUCT](CODE_OF_CONDUCT.md). By participating in this project
-you agree to abide by its terms.
+Please note that this project is released with a [CODE OF CONDUCT](CODE_OF_CONDUCT.md). By
+participating in this project you agree to abide by its terms.
 
 # Contributions
 
@@ -140,4 +132,5 @@ Read [CHANGES](CHANGES.md) for details.
 
 # Credits
 
-Developed by [Brooke Kuhlmann](https://www.alchemists.io) at [Alchemists](https://www.alchemists.io).
+Developed by [Brooke Kuhlmann](https://www.alchemists.io) at
+[Alchemists](https://www.alchemists.io).

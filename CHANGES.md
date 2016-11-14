@@ -1,3 +1,53 @@
+# v5.0.0 (2016-11-14)
+
+- Fixed application setup.
+- Fixed contributing guideline links.
+- Fixed development environment settings placement.
+- Added "fatal" logging level to test environment.
+- Added "listen" gem to development group.
+- Added Code Climate engine support.
+- Added GitHub issue and pull request templates.
+- Added PostgreSQL database support.
+- Added Puma restart support.
+- Added Rails version detection.
+- Added Reek support.
+- Added class comments for application record and mailer.
+- Added class documentation for Rails channels.
+- Added mailer layout templates.
+- Added setup and update scripts.
+- Added subresource integrity support to application layout.
+- Added templates for application stylesheet and JavaScript.
+- Added test environment null cache store.
+- Updated .gitignore settings.
+- Updated GitHub issue and pull request templates.
+- Updated Pragmater options.
+- Updated README screenshot.
+- Updated README versioning documentation.
+- Updated RSpec temp directory to use Bundler root path.
+- Updated Rakefile require path.
+- Updated Rubocop PercentLiteralDelimiters and AndOr styles.
+- Updated gem dependencies.
+- Updated gem requirements.
+- Updated to Code Climate Test Reporter 1.0.0.
+- Updated to Code of Conduct, Version 1.4.0.
+- Updated to Rails 5.0.0.
+- Updated to Rubocop 0.44.
+- Updated to Ruby 2.3.1.
+- Updated to release branch.
+- Removed "home" controller.
+- Removed "lib/assets" and "vendor" folders.
+- Removed CHANGELOG.md (use CHANGES.md instead).
+- Removed JavaScripts channels folder.
+- Removed Priscilla gem support.
+- Removed database cleaner support.
+- Removed frozen string literal pragma from templates.
+- Removed inflection initializer documentation.
+- Removed requirements from `application.scss`.
+- Removed unused Pry gems.
+- Refactored RSpec spec helper configuration.
+- Refactored SCSS Lint Rake file name.
+- Refactored VCR cassettes to "spec/support" folder.
+
 # v4.2.0 (2016-01-18)
 
 - Added Pragmater whitelist to template.
