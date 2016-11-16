@@ -30,7 +30,7 @@ creating a new Ruby on Rails application.
 The following highlights what is applied with this template:
 
 - Uses [Ruby 2.3.x](http://www.ruby-lang.org).
-- Uses [Ruby on Rails 5.0.x](http://rubyonrails.org).
+- Uses [Ruby on Rails 5.x.x](http://rubyonrails.org).
 - Adds the [PG](https://bitbucket.org/ged/ruby-pg/wiki/Home) gem requirement.
 - Adds the [Puma](http://puma.io) gem requirement.
 - Adds the [Rake](https://github.com/jimweirich/rake) gem requirement.
@@ -76,7 +76,7 @@ The following highlights what is applied with this template:
 
 0. A UNIX-based system.
 0. [Ruby 2.x.x](http://www.ruby-lang.org).
-0. [Ruby on Rails 4.2.x](http://rubyonrails.org).
+0. [Ruby on Rails 5.0.x](http://rubyonrails.org).
 0. A solid internet connection.
 
 # Usage
