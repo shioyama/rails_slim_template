@@ -37,7 +37,7 @@ end
 group :development do
   gem "listen"
   gem "pragmater"
-  gem "tocer"
+  gem "tocer", "~> 3.2"
   gem "milestoner"
 end
 
