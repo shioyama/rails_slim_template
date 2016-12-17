@@ -4,7 +4,7 @@ source "https://rubygems.org"
 gem "pg", "~> 0.18"
 
 # Server
-gem "puma"
+gem "puma", "~> 3.6"
 
 # Application
 gem "rake", "~> 11.0"
@@ -36,9 +36,9 @@ end
 
 group :development do
   gem "listen"
-  gem "pragmater"
-  gem "tocer", "~> 3.2"
-  gem "milestoner"
+  gem "pragmater", "~> 2.1", require: false
+  gem "tocer", "~> 3.2", require: false
+  gem "milestoner", "~> 4.1", require: false
 end
 
 group :test do
@@ -46,7 +46,7 @@ group :test do
   gem "climate_control"
   gem "vcr"
   gem "capybara"
-  gem "launchy" # Allows save_and_open_page to work in Capybara.
+  gem "launchy"
   gem "poltergeist"
   gem "codeclimate-test-reporter", "~> 1.0"
 end
