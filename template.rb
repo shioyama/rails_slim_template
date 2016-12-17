@@ -12,7 +12,6 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
 get "#{SLIM_TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
 run "bundle install --quiet"
 generate "rspec:install --skip"
-generate "jasmine:install"
 
 # Rails Version Check
 say_status(:error, "Invalid Rails version, use Rails 5.x.x.", :red) and abort unless `rails -v`.match(/Rails\s5.+/)
@@ -115,7 +114,6 @@ remove_dir "vendor"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/support/shared_contexts/temp_dir.rb", "spec/support/shared_contexts/temp_dir.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/rails_helper.rb", "spec/rails_helper.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/spec/spec_helper.rb", "spec/spec_helper.rb"
-get "#{SLIM_TEMPLATE_ROOT}/rails/spec/javascripts/support/jasmine.yml", "spec/javascripts/support/jasmine.yml"
 create_file "spec/factories.rb"
 
 # Code Quality

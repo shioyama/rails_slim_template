@@ -47,8 +47,6 @@ The following highlights what is applied with this template:
 - Adds the [Hirb](https://github.com/cldwalker/hirb) gem requirement.
 - Adds the [Awesome Print](https://github.com/michaeldv/awesome_print) gem requirement.
 - Adds the [RSpec Rails](https://github.com/dchelimsky/rspec-rails) gem requirement.
-- Adds the [Jasmine](http://jasmine.github.io) gem requirement.
-- Adds the [Jasmine jQuery Rails](https://github.com/travisjeffery/jasmine-jquery-rails) gem requirement.
 - Adds the [Reek](https://github.com/troessner/reek) gem requirement.
 - Adds the [Rubocop](https://github.com/bbatsov/rubocop) gem requirement.
 - Adds the [Rails Best Practices](http://rails-bestpractices.com) gem requirement.
