@@ -1,49 +1,42 @@
 source "https://rubygems.org"
 
-# Databases
 gem "pg", "~> 0.18"
-
-# Server
 gem "puma", "~> 3.6"
-
-# Application
-gem "rake", "~> 11.0"
 gem "rails", "~> 5.0"
-
-# Assets
-gem "uglifier"
-gem "slim-rails"
+gem "rake", "~> 11.0"
 gem "sass-rails"
+gem "slim-rails"
+gem "uglifier"
 
 group :development, :test do
+  gem "awesome_print"
+  gem "bond"
   gem "dotenv-rails"
+  gem "hirb"
   gem "pry"
   gem "pry-byebug"
   gem "pry-state"
-  gem "bond"
-  gem "wirb"
-  gem "hirb"
-  gem "awesome_print"
-  gem "rspec-rails", "~> 3.5"
-  gem "reek", "~> 4.5", require: false
-  gem "rubocop", "~> 0.46", require: false
   gem "rails_best_practices", require: false
+  gem "reek", "~> 4.5", require: false
+  gem "rspec-rails", "~> 3.5"
+  gem "rubocop", "~> 0.46", require: false
   gem "scss_lint", require: false
+  gem "wirb"
 end
 
 group :development do
   gem "listen"
+  gem "milestoner", "~> 4.1", require: false
   gem "pragmater", "~> 2.1", require: false
   gem "tocer", "~> 3.2", require: false
-  gem "milestoner", "~> 4.1", require: false
 end
 
 group :test do
-  gem "factory_girl_rails"
-  gem "climate_control"
-  gem "vcr"
   gem "capybara"
+  gem "climate_control"
+  gem "codeclimate-test-reporter", "~> 1.0"
+  gem "factory_girl_rails"
   gem "launchy"
   gem "poltergeist"
-  gem "codeclimate-test-reporter", "~> 1.0"
+  gem "vcr"
 end

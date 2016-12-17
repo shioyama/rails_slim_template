@@ -33,35 +33,35 @@ The following highlights what is applied with this template:
 - Uses [Ruby on Rails 5.x.x](http://rubyonrails.org).
 - Adds the [PG](https://bitbucket.org/ged/ruby-pg/wiki/Home) gem requirement.
 - Adds the [Puma](http://puma.io) gem requirement.
-- Adds the [Rake](https://github.com/jimweirich/rake) gem requirement.
 - Adds the [Ruby on Rails](http://rubyonrails.org) gem requirement.
-- Adds the [Uglifier](https://github.com/lautis/uglifier) gem requirement.
-- Adds the [Slim Rails](https://github.com/slim-template/slim) gem requirement.
+- Adds the [Rake](https://github.com/jimweirich/rake) gem requirement.
 - Adds the [SASS Rails](https://github.com/rails/sass-rails) gem requirement.
+- Adds the [Slim Rails](https://github.com/slim-template/slim) gem requirement.
+- Adds the [Uglifier](https://github.com/lautis/uglifier) gem requirement.
+- Adds the [Awesome Print](https://github.com/michaeldv/awesome_print) gem requirement.
+- Adds the [Bond](https://github.com/cldwalker/bond) gem requirement.
 - Adds the [Dotenv Rails](https://github.com/bkeepers/dotenv) gem requirement.
+- Adds the [Hirb](https://github.com/cldwalker/hirb) gem requirement.
 - Adds the [Pry](https://github.com/pry/pry) gem requirement.
 - Adds the [Pry ByeBug](https://github.com/deivid-rodriguez/pry-byebug) gem requirement.
 - Adds the [Pry State](https://github.com/SudhagarS/pry-state) gem requirement.
-- Adds the [Bond](https://github.com/cldwalker/bond) gem requirement.
-- Adds the [Wirb](https://github.com/janlelis/wirb) gem requirement.
-- Adds the [Hirb](https://github.com/cldwalker/hirb) gem requirement.
-- Adds the [Awesome Print](https://github.com/michaeldv/awesome_print) gem requirement.
-- Adds the [RSpec Rails](https://github.com/dchelimsky/rspec-rails) gem requirement.
-- Adds the [Reek](https://github.com/troessner/reek) gem requirement.
-- Adds the [Rubocop](https://github.com/bbatsov/rubocop) gem requirement.
 - Adds the [Rails Best Practices](http://rails-bestpractices.com) gem requirement.
+- Adds the [Reek](https://github.com/troessner/reek) gem requirement.
+- Adds the [RSpec Rails](https://github.com/dchelimsky/rspec-rails) gem requirement.
+- Adds the [Rubocop](https://github.com/bbatsov/rubocop) gem requirement.
 - Adds the [SCSS Lint](https://github.com/brigade/scss-lint) gem requirement.
+- Adds the [Wirb](https://github.com/janlelis/wirb) gem requirement.
 - Adds the [Listen](https://github.com/guard/listen) gem requirement.
+- Adds the [Milestoner](https://github.com/bkuhlmann/milestoner) gem requirement.
 - Adds the [Pragmater](https://github.com/bkuhlmann/pragmater) gem requirement.
 - Adds the [Tocer](https://github.com/bkuhlmann/tocer) gem requirement.
-- Adds the [Milestoner](https://github.com/bkuhlmann/milestoner) gem requirement.
-- Adds the [Factory Girl Rails](https://github.com/thoughtbot/factory_girl_rails) gem requirement.
-- Adds the [Climate Control](https://github.com/thoughtbot/climate_control) gem requirement.
-- Adds the [VCR](https://github.com/vcr/vcr) gem requirement.
 - Adds the [Capybara](https://github.com/jnicklas/capybara) gem requirement.
+- Adds the [Climate Control](https://github.com/thoughtbot/climate_control) gem requirement.
+- Adds the [Code Climate Test Reporter](https://github.com/codeclimate/ruby-test-reporter) gem requirement.
+- Adds the [Factory Girl Rails](https://github.com/thoughtbot/factory_girl_rails) gem requirement.
 - Adds the [Launchy](https://github.com/copiousfreetime/launchy) gem requirement.
 - Adds the [Poltergeist](https://github.com/teampoltergeist/poltergeist) gem requirement.
-- Adds the [Code Climate](https://github.com/codeclimate/ruby-test-reporter) gem requirement.
+- Adds the [VCR](https://github.com/vcr/vcr) gem requirement.
 - Installs a customized application.html.erb file with a basic site layout.
 - Installs customized application graphics.
 - Installs customized generator defaults.
