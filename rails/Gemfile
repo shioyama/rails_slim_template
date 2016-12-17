@@ -14,7 +14,6 @@ gem "rails", "~> 5.0"
 gem "uglifier"
 gem "slim-rails"
 gem "sass-rails"
-gem "jquery-rails"
 
 group :development, :test do
   gem "dotenv-rails"
