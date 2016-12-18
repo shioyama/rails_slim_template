@@ -117,10 +117,6 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/spec/spec_helper.rb", "spec/spec_helper.rb"
 create_file "spec/factories.rb"
 
 # Code Quality
-get "#{SLIM_TEMPLATE_ROOT}/rails/lib/tasks/rails_best_practices.rake", "lib/tasks/rails_best_practices.rake"
-get "#{SLIM_TEMPLATE_ROOT}/rails/lib/tasks/reek.rake", "lib/tasks/reek.rake"
-get "#{SLIM_TEMPLATE_ROOT}/rails/lib/tasks/rubocop.rake", "lib/tasks/rubocop.rake"
-get "#{SLIM_TEMPLATE_ROOT}/rails/lib/tasks/scss_lint.rake", "lib/tasks/scss_lint.rake"
 get "#{SLIM_TEMPLATE_ROOT}/rails/codeclimate.yml", ".codeclimate.yml"
 get "#{SLIM_TEMPLATE_ROOT}/rails/rubocop.yml", ".rubocop.yml"
 get "#{SLIM_TEMPLATE_ROOT}/rails/scss-lint.yml", ".scss-lint.yml"
