@@ -28,7 +28,6 @@ run "echo \"SECRET_KEY_BASE=$(bin/rake secret)\" >> .env"
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
 
 # Configuration - Application
-insert_into_file "config/application.rb", "  # The application configuration.\n", before: "  class Application < Rails::Application\n"
 insert_into_file "config/application.rb", open("#{SLIM_TEMPLATE_ROOT}/rails/config/application.delta.rb").read, after: "    # -- all .rb files in that directory are automatically loaded.\n"
 
 # Configuration - Stage
@@ -57,14 +56,7 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/Procfile", "Procfile"
 get "#{SLIM_TEMPLATE_ROOT}/rails/bin/setup", "bin/setup"
 run "cp bin/setup bin/update"
 
-# Channels
-insert_into_file "app/channels/application_cable/channel.rb", "  # The application channel.\n", after: "module ApplicationCable\n"
-gsub_file "app/channels/application_cable/channel.rb", /\s{4}end\n/, "  end"
-insert_into_file "app/channels/application_cable/connection.rb", "  # The application connection.\n", after: "module ApplicationCable\n"
-gsub_file "app/channels/application_cable/connection.rb", /\s{4}end\n/, "  end"
-
 # Controllers
-insert_into_file "app/controllers/application_controller.rb", "# The application controller.\n", before: "class ApplicationController < ActionController::Base\n"
 insert_into_file "app/controllers/application_controller.rb", "  helper :all\n", after: "class ApplicationController < ActionController::Base\n"
 
 # Helpers
@@ -77,12 +69,6 @@ remove_file "app/views/layouts/mailer.text.erb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/application.html.slim", "app/views/layouts/application.html.slim"
 get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/mailer.html.slim", "app/views/layouts/mailer.html.slim"
 get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/mailer.text.slim", "app/views/layouts/mailer.text.slim"
-
-# Models
-insert_into_file "app/models/application_record.rb", "# The application record.\n", before: "class ApplicationRecord < ActiveRecord::Base\n"
-
-# Mailers
-insert_into_file "app/mailers/application_mailer.rb", "# The application mailer.\n", before: "class ApplicationMailer < ActionMailer::Base\n"
 
 # Stylesheets
 remove_file "app/assets/stylesheets/application.css"
