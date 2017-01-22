@@ -19,16 +19,16 @@ group :development, :test do
   gem "rails_best_practices", "~> 1.17", require: false
   gem "reek", "~> 4.5", "~> 4.5", require: false
   gem "rspec-rails", "~> 3.5"
-  gem "rubocop", "~> 0.46", require: false
+  gem "rubocop", "~> 0.47", require: false
   gem "scss_lint", "~> 0.51", require: false
   gem "wirb", "~> 2.1"
 end
 
 group :development do
   gem "listen", "~> 3.1"
-  gem "milestoner", "~> 4.2", require: false
-  gem "pragmater", "~> 2.2", require: false
-  gem "tocer", "~> 3.3", require: false
+  gem "milestoner", "~> 5.0", require: false
+  gem "pragmater", "~> 3.0", require: false
+  gem "tocer", "~> 4.0", require: false
 end
 
 group :test do
