@@ -104,6 +104,7 @@ create_file "spec/factories.rb"
 
 # Code Quality
 get "#{SLIM_TEMPLATE_ROOT}/rails/codeclimate.yml", ".codeclimate.yml"
+get "#{SLIM_TEMPLATE_ROOT}/rails/reek", ".reek"
 get "#{SLIM_TEMPLATE_ROOT}/rails/rubocop.yml", ".rubocop.yml"
 get "#{SLIM_TEMPLATE_ROOT}/rails/scss-lint.yml", ".scss-lint.yml"
 run "rubocop --auto-correct > /dev/null"
