@@ -16,7 +16,9 @@ VCR.configure do |config|
   config.configure_rspec_metadata!
 end
 
-Dir[File.join(File.dirname(__FILE__), "support/shared_contexts/**/*.rb")].each { |file| require file }
+Dir[File.join(File.dirname(__FILE__), "support/shared_contexts/**/*.rb")].each do |file|
+  require file
+end
 
 RSpec.configure do |config|
   config.order = "random"

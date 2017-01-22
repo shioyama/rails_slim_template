@@ -18,6 +18,7 @@ say_status(:error, "Invalid Rails version, use Rails 5.x.x.", :red) and abort un
 
 # Configuration - Initializers
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/inflections.rb", "config/initializers/inflections.rb"
+run %(printf "%s\n" "# frozen_string_literal: true" > config/initializers/backtrace_silencers.rb)
 
 # Configuration - Secrets
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
@@ -89,6 +90,9 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/public/favicon.ico", "public/favicon.ico"
 remove_file "README.rdoc"
 get "#{SLIM_TEMPLATE_ROOT}/rails/README.md", "README.md"
 run "tocer --generate . --whitelist README.md"
+
+# Database
+run %(printf "%s\n" "# frozen_string_literal: true" > db/seeds.rb)
 
 # Lib
 remove_dir "lib/assets"
