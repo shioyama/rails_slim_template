@@ -20,9 +20,6 @@ say_status(:error, "Invalid Rails version. Use: 5.x.x.", :red) and abort unless 
 # Bundler
 run "bundle install --quiet"
 
-# Generators
-generate "rspec:install --skip"
-
 # Configuration - Initializers
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/inflections.rb", "config/initializers/inflections.rb"
 run %(printf "%s\n" "# frozen_string_literal: true" > config/initializers/backtrace_silencers.rb)
