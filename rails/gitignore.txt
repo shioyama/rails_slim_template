@@ -1,14 +1,14 @@
 # Git Ignore File
 
 # Bundler
-/.bundle
+.bundle
 
 # Rails
-/.config
-/config/*.yml
-!/config/secrets.yml
-/log/*
-/tmp/*
+.config
+config/*.yml
+!config/secrets.yml
+log
+tmp
 
 # RSpec
 .rspec
