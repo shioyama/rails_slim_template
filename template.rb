@@ -65,7 +65,7 @@ run "cp bin/setup bin/update"
 insert_into_file "app/controllers/application_controller.rb", "  helper :all\n", after: "class ApplicationController < ActionController::Base\n"
 
 # Helpers
-remove_file "app/helpers/application_helper.rb"
+remove_file "app/helpers"
 
 # Views
 remove_file "app/views/layouts/application.html.erb"
