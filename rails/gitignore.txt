@@ -9,3 +9,6 @@ config/*.yml
 !config/secrets.yml
 log
 tmp
+
+# Rubocop
+.rubocop-http*

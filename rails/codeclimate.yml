@@ -1,3 +1,6 @@
+prepare:
+  fetch:
+    - https://raw.githubusercontent.com/bkuhlmann/code_quality/v0.1.0/configurations/.rubocop.yml
 engines:
   shellcheck:
     enabled: true
