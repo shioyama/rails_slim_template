@@ -20,5 +20,8 @@ task :rails_best_practices do
   fail unless system "rails_best_practices --silent"
 end
 
+desc "Run code quality checks"
+task code_quality: %i[reek rubocop rails_best_practices scss_lint]
+
 task(:default).clear
-task default: %w[spec reek rubocop rails_best_practices scss_lint]
+task default: %w[code_quality spec]
