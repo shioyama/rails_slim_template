@@ -1,3 +1,33 @@
+# v6.0.0 (2017-02-05)
+
+- Fixed README to mention correct Rails version.
+- Fixed Rubocop issues.
+- Fixed removal of `app/helpers` directory.
+- Added Reek configuration.
+- Added Ruby version check to template.
+- Added code quality Rake task.
+- Updated Gemfile configuration.
+- Updated Gemfile with conservative versions.
+- Updated Rakefile tasks.
+- Updated Rubocop Metrics/LineLength to 100 characters.
+- Updated Rubocop Metrics/ParameterLists max to three.
+- Updated Rubocop to import from global configuration.
+- Updated contributing documentation.
+- Updated gem dependencies.
+- Updated gems to be alpha-sorted by group.
+- Updated gitignore syntax.
+- Updated public assets.
+- Updated to Ruby 2.4.0.
+- Removed Code Climate FIXME engine.
+- Removed Jasmine gems.
+- Removed Rubocop Style/Documentation check.
+- Removed controller spec generation from Rails application.
+- Removed documentation for Rails classes.
+- Removed jQuery Rails gem.
+- Refactored Puma confguration.
+- Refactored RSpec configuration.
+- Refactored Rake tasks to be loaded from central location.
+
 # v5.0.0 (2016-11-14)
 
 - Fixed application setup.

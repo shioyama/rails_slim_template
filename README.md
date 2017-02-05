@@ -29,7 +29,7 @@ creating a new Ruby on Rails application.
 
 The following highlights what is applied with this template:
 
-- Uses [Ruby 2.3.x](http://www.ruby-lang.org).
+- Uses [Ruby 2.4.x](http://www.ruby-lang.org).
 - Uses [Ruby on Rails 5.x.x](http://rubyonrails.org).
 - Adds the [PG](https://bitbucket.org/ged/ruby-pg/wiki/Home) gem requirement.
 - Adds the [Puma](http://puma.io) gem requirement.
@@ -65,15 +65,14 @@ The following highlights what is applied with this template:
 - Installs a customized application.html.erb file with a basic site layout.
 - Installs customized application graphics.
 - Installs customized generator defaults.
-- Installs a simple _home_ controller for demo usage.
-- Installs a .gitignore file with general [Git](http://git-scm.com) exclusions.
-- Installs a .rbenv-version file for use with [rbenv](https://github.com/sstephenson/rbenv).
+- Installs a `.gitignore` file with general [Git](http://git-scm.com) exclusions.
+- Installs a `.ruby-version` file for multiple Ruby VM support.
 
 # Requirements
 
 0. A UNIX-based system.
-0. [Ruby 2.x.x](http://www.ruby-lang.org).
-0. [Ruby on Rails 5.0.x](http://rubyonrails.org).
+0. [Ruby 2.4.x](http://www.ruby-lang.org).
+0. [Ruby on Rails 5.x.x](http://rubyonrails.org).
 0. A solid internet connection.
 
 # Usage
@@ -83,7 +82,7 @@ preference:
 
 Current Version (stable):
 
-    rails new demo --skip-git --skip-gemfile --skip-bundle --skip-test --skip-spring --skip-turbolinks --skip-puma --skip-keeps --force --database postgresql --template https://raw.github.com/bkuhlmann/rails_slim_template/v5.0.0/template.rb
+    rails new demo --skip-git --skip-gemfile --skip-bundle --skip-test --skip-spring --skip-turbolinks --skip-puma --skip-keeps --force --database postgresql --template https://raw.github.com/bkuhlmann/rails_slim_template/v6.0.0/template.rb
 
 Master Version (unstable):
 
