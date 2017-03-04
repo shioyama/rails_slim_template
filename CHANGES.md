@@ -1,3 +1,10 @@
+# v6.1.0 (2017-03-04)
+
+- Fixed Ruby/Rails version checks.
+- Updated README semantic versioning order.
+- Updated RSpec configuration to output documentation when running.
+- Updated gem dependencies.
+
 # v6.0.0 (2017-02-05)
 
 - Fixed README to mention correct Rails version.
