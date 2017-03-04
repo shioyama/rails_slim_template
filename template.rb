@@ -3,7 +3,7 @@
 require "open-uri"
 
 SLIM_TEMPLATE_NAME = "Rails Slim Template"
-SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/master"
+SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/release"
 
 # Gemfile
 get "#{SLIM_TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
@@ -11,14 +11,14 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
 # Ruby Version Management
 get "#{SLIM_TEMPLATE_ROOT}/rails/ruby-version.txt", ".ruby-version"
 
+# Bundler
+run "bundle install --quiet"
+
 # Ruby Version Check
 say_status(:error, "Invalid Ruby version. Use: 2.4.x.", :red) and abort unless RUBY_VERSION.match?(/2\.4\.\d+/)
 
 # Rails Version Check
 say_status(:error, "Invalid Rails version. Use: 5.x.x.", :red) and abort unless `rails -v`.match?(/Rails\s5.*/)
-
-# Bundler
-run "bundle install --quiet"
 
 # Configuration - Initializers
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/inflections.rb", "config/initializers/inflections.rb"
