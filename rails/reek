@@ -1,2 +1,8 @@
 IrresponsibleModule:
   enabled: false
+
+"db/migrate":
+  FeatureEnvy:
+    enabled: false
+  TooManyStatements:
+    enabled: false
