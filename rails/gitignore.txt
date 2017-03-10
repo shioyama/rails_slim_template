@@ -12,3 +12,9 @@ tmp
 
 # Rubocop
 .rubocop-http*
+
+# Node
+node_modules
+
+# Elm
+elm-stuff
