@@ -6,5 +6,6 @@
       generator.helper false
       generator.test_framework :rspec
       generator.view_specs false
+      generator.orm :active_record, primary_key_type: :uuid
     end
 

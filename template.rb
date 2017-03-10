@@ -20,6 +20,10 @@ say_status(:error, "Invalid Ruby version. Use: 2.4.x.", :red) and abort unless R
 # Rails Version Check
 say_status(:error, "Invalid Rails version. Use: 5.x.x.", :red) and abort unless `rails -v`.match?(/Rails\s5.*/)
 
+# Bin
+get "#{SLIM_TEMPLATE_ROOT}/rails/bin/setup", "bin/setup"
+run "cp bin/setup bin/update"
+
 # Configuration - Initializers
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/inflections.rb", "config/initializers/inflections.rb"
 run %(printf "%s\n" "# frozen_string_literal: true" > config/initializers/backtrace_silencers.rb)
@@ -57,9 +61,9 @@ insert_into_file "config/environments/test.rb", "\n  config.log_level = :fatal\n
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/puma.rb", "config/puma.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/Procfile", "Procfile"
 
-# Bin
-get "#{SLIM_TEMPLATE_ROOT}/rails/bin/setup", "bin/setup"
-run "cp bin/setup bin/update"
+# Database
+get "#{SLIM_TEMPLATE_ROOT}/rails/db/migrate/20170101000000_enable_uuid_extension.rb", "db/migrate/20170101000000_enable_uuid_extension.rb"
+run %(printf "%s\n" "# frozen_string_literal: true" > db/seeds.rb)
 
 # Controllers
 insert_into_file "app/controllers/application_controller.rb", "  helper :all\n", after: "class ApplicationController < ActionController::Base\n"
@@ -94,9 +98,6 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/public/favicon.ico", "public/favicon.ico"
 remove_file "README.rdoc"
 get "#{SLIM_TEMPLATE_ROOT}/rails/README.md", "README.md"
 run "tocer --generate . --whitelist README.md"
-
-# Database
-run %(printf "%s\n" "# frozen_string_literal: true" > db/seeds.rb)
 
 # Lib
 remove_dir "lib/assets"
