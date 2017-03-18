@@ -1,3 +1,16 @@
+# v6.2.0 (2017-03-18)
+
+- Added Node and Elm modules to Git ignore.
+- Added PostgreSQL UUID primary key support.
+- Added assets initializer template.
+- Added backtrace silencers initializer template.
+- Added creation of empty database seeds file.
+- Updated Reek configuration for database migrations.
+- Updated application generators to default to Slim templates.
+- Updated to Code Quality 0.3.0.
+- Removed assets precompile comment from production environment.
+- Removed unnecessary addition of frozen string literals.
+
 # v6.1.0 (2017-03-04)
 
 - Fixed Ruby/Rails version checks.
