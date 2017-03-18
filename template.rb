@@ -27,6 +27,7 @@ run "cp bin/setup bin/update"
 # Configuration - Initializers
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/inflections.rb", "config/initializers/inflections.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/assets.rb", "config/initializers/assets.rb"
+get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/backtrace_silencers.rb", "config/initializers/backtrace_silencers.rb"
 
 # Configuration - Secrets
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
