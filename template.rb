@@ -40,6 +40,10 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
 # Configuration - Application
 insert_into_file "config/application.rb", open("#{SLIM_TEMPLATE_ROOT}/rails/config/application.delta.rb").read, after: "    # -- all .rb files in that directory are automatically loaded.\n"
 
+# Configuration - Production
+gsub_file "config/environments/production.rb", /\`config\.assets\.precompile\`\sand/, ""
+comment_lines "config/environments/production.rb", /`config.assets.version`/
+
 # Configuration - Stage
 run "cp config/environments/production.rb config/environments/stage.rb"
 
