@@ -27,6 +27,7 @@ run "cp bin/setup bin/update"
 # Configuration - Initializers
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/inflections.rb", "config/initializers/inflections.rb"
 run %(printf "%s\n" "# frozen_string_literal: true" > config/initializers/backtrace_silencers.rb)
+get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/assets.rb", "config/initializers/assets.rb"
 
 # Configuration - Secrets
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"
