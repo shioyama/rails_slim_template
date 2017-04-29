@@ -37,6 +37,7 @@ The following highlights what is applied with this template:
 - Adds the [Ruby on Rails](http://rubyonrails.org) gem requirement.
 - Adds the [Rake](https://github.com/jimweirich/rake) gem requirement.
 - Adds the [Slim Rails](https://github.com/slim-template/slim) gem requirement.
+- Adds the [Webpacker](https://github.com/rails/webpacker) gem requirement.
 - Adds the [Awesome Print](https://github.com/michaeldv/awesome_print) gem requirement.
 - Adds the [Bond](https://github.com/cldwalker/bond) gem requirement.
 - Adds the [Dotenv Rails](https://github.com/bkeepers/dotenv) gem requirement.

@@ -79,6 +79,9 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/application.html.slim", "app/
 get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/mailer.html.slim", "app/views/layouts/mailer.html.slim"
 get "#{SLIM_TEMPLATE_ROOT}/rails/app/views/layouts/mailer.text.slim", "app/views/layouts/mailer.text.slim"
 
+# Webpacker
+run "rails webpacker:install"
+
 # Stylesheets
 remove_file "app/assets/stylesheets/application.css"
 get "#{SLIM_TEMPLATE_ROOT}/rails/app/assets/stylesheets/application.scss", "app/assets/stylesheets/application.scss"
