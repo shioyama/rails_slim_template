@@ -3,7 +3,7 @@
 require "open-uri"
 
 SLIM_TEMPLATE_NAME = "Rails Slim Template"
-SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/v6.2.0"
+SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/release"
 
 # Gemfile
 get "#{SLIM_TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
@@ -26,7 +26,6 @@ run "cp bin/setup bin/update"
 
 # Configuration - Initializers
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/inflections.rb", "config/initializers/inflections.rb"
-get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/assets.rb", "config/initializers/assets.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/backtrace_silencers.rb", "config/initializers/backtrace_silencers.rb"
 
 # Configuration - Secrets
@@ -40,10 +39,6 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/config/database.yml", "config/database.yml"
 # Configuration - Application
 insert_into_file "config/application.rb", open("#{SLIM_TEMPLATE_ROOT}/rails/config/application.delta.rb").read, after: "    # -- all .rb files in that directory are automatically loaded.\n"
 
-# Configuration - Production
-gsub_file "config/environments/production.rb", /\`config\.assets\.precompile\`\sand/, ""
-comment_lines "config/environments/production.rb", /`config.assets.version`/
-
 # Configuration - Stage
 run "cp config/environments/production.rb config/environments/stage.rb"
 
@@ -53,7 +48,7 @@ insert_into_file "config/environments/development.rb", "  config.action_mailer.d
 uncomment_lines "config/environments/development.rb", /config.action_view.raise_on_missing_translations/
 insert_into_file "config/environments/development.rb", "  config.action_controller.action_on_unpermitted_parameters = :raise\n", after: "config.consider_all_requests_local = true\n"
 insert_into_file "config/environments/development.rb", "\n  # Raise error when receiving unauthorized parameters.\n", after: "config.consider_all_requests_local = true\n"
-gsub_file "config/environments/development.rb", /config\.assets\.debug\s=\strue/, "config.assets.debug = false"
+gsub_file "config/environments/development.rb", %('tmp/caching-dev.txt'), %("tmp", "caching-dev.txt")
 
 # Configuration - Test
 uncomment_lines "config/environments/test.rb", /config.action_view.raise_on_missing_translations/
@@ -90,8 +85,7 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/app/assets/stylesheets/application.scss", "app/
 
 # JavaScripts
 get "#{SLIM_TEMPLATE_ROOT}/rails/app/assets/javascripts/application.js", "app/assets/javascripts/application.js"
-gsub_file "app/assets/javascripts/cable.js", "//= require_tree ./channels\n", ""
-remove_dir "app/assets/javascripts/channels"
+get "#{SLIM_TEMPLATE_ROOT}/rails/app/javascript/packs/application.js", "app/javascript/packs/application.js"
 
 # Images
 remove_file "app/assets/images/rails.png"
@@ -128,6 +122,12 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/Rakefile", "Rakefile"
 
 # Pragma
 run %(pragmater --add . --comments "# frozen_string_literal: true" --whitelist "Gemfile" "Guardfile" "Rakefile" "config.ru" "bin/**/*" ".gemspec" ".rake" ".rb")
+
+# Workarounds
+insert_into_file "bin/webpack", "  # rubocop:disable Security/YAMLLoad\n", after: "begin\n"
+insert_into_file "bin/webpack-dev-server", "  # rubocop:disable Security/YAMLLoad\n", after: "begin\n"
+gsub_file "bin/webpack", "YAML.safe_load", "YAML.load"
+gsub_file "bin/webpack-dev-server", "YAML.safe_load", "YAML.load"
 
 # Git
 git init: "--quiet"

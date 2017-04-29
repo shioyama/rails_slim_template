@@ -14,9 +14,12 @@ def system! *args
 end
 
 FileUtils.chdir app_root do
-  label "Installing dependencies"
+  label "Installing gem dependencies"
   system! "gem install bundler --conservative"
   system("bundle check") || system!("bundle install")
+
+  label "Install JavaScript dependencies"
+  system! "bin/yarn"
 
   label "Preparing database", prefix: "\n"
   system! "bin/rails db:setup"

@@ -2,7 +2,7 @@ login: &login
   host: localhost
   adapter: postgresql
   encoding: unicode
-  pool: 5
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 default: &default
   database: rails_template_dev

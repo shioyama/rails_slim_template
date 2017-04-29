@@ -3,18 +3,20 @@
 # Bundler
 .bundle
 
+# Elm
+elm-stuff
+
+# Node
+node_modules
+
 # Rails
 .config
-config/*.yml
-!config/secrets.yml
 log
+public/packs
 tmp
 
 # Rubocop
 .rubocop-http*
 
-# Node
-node_modules
-
-# Elm
-elm-stuff
+# Yarn
+yarn-error.log

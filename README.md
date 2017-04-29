@@ -35,9 +35,7 @@ The following highlights what is applied with this template:
 - Adds the [Puma](http://puma.io) gem requirement.
 - Adds the [Ruby on Rails](http://rubyonrails.org) gem requirement.
 - Adds the [Rake](https://github.com/jimweirich/rake) gem requirement.
-- Adds the [SASS Rails](https://github.com/rails/sass-rails) gem requirement.
 - Adds the [Slim Rails](https://github.com/slim-template/slim) gem requirement.
-- Adds the [Uglifier](https://github.com/lautis/uglifier) gem requirement.
 - Adds the [Awesome Print](https://github.com/michaeldv/awesome_print) gem requirement.
 - Adds the [Bond](https://github.com/cldwalker/bond) gem requirement.
 - Adds the [Dotenv Rails](https://github.com/bkeepers/dotenv) gem requirement.
