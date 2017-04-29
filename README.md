@@ -31,6 +31,7 @@ The following highlights what is applied with this template:
 
 - Uses [Ruby 2.4.x](http://www.ruby-lang.org).
 - Uses [Ruby on Rails 5.x.x](http://rubyonrails.org).
+- Adds the [Foreman](https://github.com/ddollar/foreman) gem requirement.
 - Adds the [PG](https://bitbucket.org/ged/ruby-pg/wiki/Home) gem requirement.
 - Adds the [Puma](http://puma.io) gem requirement.
 - Adds the [Ruby on Rails](http://rubyonrails.org) gem requirement.
