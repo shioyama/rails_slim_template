@@ -65,9 +65,6 @@ get "#{SLIM_TEMPLATE_ROOT}/rails/Procfile", "Procfile"
 get "#{SLIM_TEMPLATE_ROOT}/rails/db/migrate/20170101000000_enable_uuid_extension.rb", "db/migrate/20170101000000_enable_uuid_extension.rb"
 create_file "db/seeds.rb"
 
-# Controllers
-insert_into_file "app/controllers/application_controller.rb", "  helper :all\n", after: "class ApplicationController < ActionController::Base\n"
-
 # Helpers
 remove_file "app/helpers"
 
