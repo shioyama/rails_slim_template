@@ -1,3 +1,14 @@
+# v6.3.0 (2017-05-07)
+
+- Added Foreman gem.
+- Added Webpacker gem.
+- Updated Rubocop configuration.
+- Updated gem dependencies.
+- Updated to Rails 5.1.0.
+- Updated to Ruby 2.4.1.
+- Updated to Tocer 5.0.0.
+- Removed helper configuration from application controller.
+
 # v6.2.0 (2017-03-18)
 
 - Added Node and Elm modules to Git ignore.
