@@ -3,7 +3,7 @@
 require "open-uri"
 
 SLIM_TEMPLATE_NAME = "Rails Slim Template"
-SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/v6.3.0"
+SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/master"
 
 # Gemfile
 get "#{SLIM_TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
