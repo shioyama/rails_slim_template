@@ -3,26 +3,26 @@
 <!-- Tocer[start] -->
 <!-- Tocer[finish] -->
 
-# Features
+## Features
 
-# Requirements
+## Requirements
 
-# Setup
+## Setup
 
-# Usage
+## Usage
 
-# Tests
+## Tests
 
-# Deployment
+## Deployment
 
-# Versioning
+## Versioning
 
-# Code of Conduct
+## Code of Conduct
 
-# Contributions
+## Contributions
 
-# License
+## License
 
-# History
+## History
 
-# Credits
+## Credits

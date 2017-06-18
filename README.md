@@ -8,22 +8,22 @@ creating a new Ruby on Rails application.
 
 <!-- Tocer[start]: Auto-generated, don't remove. -->
 
-# Table of Contents
+## Table of Contents
 
-- [Features](#features)
-- [Requirements](#requirements)
-- [Usage](#usage)
-- [Setup](#setup)
-- [Versioning](#versioning)
-- [Code of Conduct](#code-of-conduct)
-- [Contributions](#contributions)
-- [License](#license)
-- [History](#history)
-- [Credits](#credits)
+  - [Features](#features)
+  - [Requirements](#requirements)
+  - [Usage](#usage)
+  - [Setup](#setup)
+  - [Versioning](#versioning)
+  - [Code of Conduct](#code-of-conduct)
+  - [Contributions](#contributions)
+  - [License](#license)
+  - [History](#history)
+  - [Credits](#credits)
 
 <!-- Tocer[finish]: Auto-generated, don't remove. -->
 
-# Features
+## Features
 
 [![Screenshot](screenshot.png)](https://github.com/bkuhlmann/rails_slim_template)
 
@@ -68,14 +68,14 @@ The following highlights what is applied with this template:
 - Installs a `.gitignore` file with general [Git](http://git-scm.com) exclusions.
 - Installs a `.ruby-version` file for multiple Ruby VM support.
 
-# Requirements
+## Requirements
 
 0. A UNIX-based system.
 0. [Ruby 2.4.x](http://www.ruby-lang.org).
 0. [Ruby on Rails 5.x.x](http://rubyonrails.org).
 0. A solid internet connection.
 
-# Usage
+## Usage
 
 Open a terminal window and execute one the following command lines depending on your version
 preference:
@@ -92,7 +92,7 @@ Master Version (unstable):
 listed above, to your `.railsrc` file. Any options in the .railsrc file will be applied with each
 new app generation.
 
-# Setup
+## Setup
 
 After the template has been applied, you'll want to tweak the following files:
 
@@ -100,7 +100,7 @@ After the template has been applied, you'll want to tweak the following files:
 - public/apple-touch-icon.png = Replace with your own custom image.
 - public/favicon.ico = Replace with your own custom icon.
 
-# Versioning
+## Versioning
 
 Read [Semantic Versioning](http://semver.org) for details. Briefly, it means:
 
@@ -108,25 +108,25 @@ Read [Semantic Versioning](http://semver.org) for details. Briefly, it means:
 - Minor (x.Y.z) - Incremented for new, backwards compatible, public API enhancements/fixes.
 - Patch (x.y.Z) - Incremented for small, backwards compatible, bug fixes.
 
-# Code of Conduct
+## Code of Conduct
 
 Please note that this project is released with a [CODE OF CONDUCT](CODE_OF_CONDUCT.md). By
 participating in this project you agree to abide by its terms.
 
-# Contributions
+## Contributions
 
 Read [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-# License
+## License
 
 Copyright (c) 2013 [Alchemists](https://www.alchemists.io).
 Read [LICENSE](LICENSE.md) for details.
 
-# History
+## History
 
 Read [CHANGES](CHANGES.md) for details.
 
-# Credits
+## Credits
 
 Developed by [Brooke Kuhlmann](https://www.alchemists.io) at
 [Alchemists](https://www.alchemists.io).
