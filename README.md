@@ -1,5 +1,6 @@
 # Rails Slim Template
 
+[![Circle CI Status](https://circleci.com/gh/bkuhlmann/rails_slim_template.svg?style=svg)](https://circleci.com/gh/bkuhlmann/rails_slim_template)
 [![Patreon](https://img.shields.io/badge/patreon-donate-brightgreen.svg)](https://www.patreon.com/bkuhlmann)
 
 Bootstraps a Ruby on Rails project with the minimum essentials to get started which is less than
