@@ -1,6 +1,7 @@
 require_relative "config/application"
 
 begin
+  require "git/cop/rake/setup"
   require "reek/rake/task"
   require "rubocop/rake_task"
   require "scss_lint/rake_task"
@@ -21,7 +22,7 @@ task :rails_best_practices do
 end
 
 desc "Run code quality checks"
-task code_quality: %i[reek rubocop rails_best_practices scss_lint]
+task code_quality: %i[git_cop reek rubocop rails_best_practices scss_lint]
 
 task(:default).clear
 task default: %w[code_quality spec]
