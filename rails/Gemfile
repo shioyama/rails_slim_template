@@ -12,13 +12,13 @@ group :development, :test do
   gem "awesome_print", "~> 1.7"
   gem "bond", "~> 0.5"
   gem "dotenv-rails", "~> 2.2"
-  gem "git-cop", "~> 1.0"
+  gem "git-cop", "~> 1.1"
   gem "hirb", "~> 0.7"
   gem "pry", "~> 0.10"
   gem "pry-byebug", "~> 3.4"
   gem "pry-state", "~> 0.1"
   gem "rails_best_practices", "~> 1.18", require: false
-  gem "reek", "~> 4.5", "~> 4.6", require: false
+  gem "reek", "~> 4.7", require: false
   gem "rspec-rails", "~> 3.6"
   gem "rubocop", "~> 0.49", require: false
   gem "scss_lint", "~> 0.51", require: false
