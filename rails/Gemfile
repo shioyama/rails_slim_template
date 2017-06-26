@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "foreman", "~> 0.84"
-gem "pg", "~> 0.20"
+gem "pg", "~> 0.21"
 gem "puma", "~> 3.8"
 gem "rails", "~> 5.1"
 gem "rake", "~> 12.0"
@@ -9,7 +9,7 @@ gem "slim-rails", "~> 3.1"
 gem "webpacker", "~> 1.2"
 
 group :development, :test do
-  gem "awesome_print", "~> 1.7"
+  gem "awesome_print", "~> 1.8"
   gem "bond", "~> 0.5"
   gem "dotenv-rails", "~> 2.2"
   gem "git-cop", "~> 1.1"
