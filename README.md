@@ -60,7 +60,6 @@ The following highlights what is applied with this template:
 - Adds the [Code Climate Test Reporter](https://github.com/codeclimate/ruby-test-reporter) gem requirement.
 - Adds the [Factory Girl Rails](https://github.com/thoughtbot/factory_girl_rails) gem requirement.
 - Adds the [Launchy](https://github.com/copiousfreetime/launchy) gem requirement.
-- Adds the [Poltergeist](https://github.com/teampoltergeist/poltergeist) gem requirement.
 - Adds the [VCR](https://github.com/vcr/vcr) gem requirement.
 - Installs a customized application.html.erb file with a basic site layout.
 - Installs customized application graphics.
