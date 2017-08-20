@@ -1,6 +1,5 @@
 source "https://rubygems.org"
 
-gem "foreman", "~> 0.84"
 gem "pg", "~> 0.21"
 gem "puma", "~> 3.8"
 gem "rails", "~> 5.1"
