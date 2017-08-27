@@ -3,7 +3,6 @@ SimpleCov.start
 
 require "pry"
 require "pry-byebug"
-require "pry-state"
 require "vcr"
 
 VCR.configure do |config|
