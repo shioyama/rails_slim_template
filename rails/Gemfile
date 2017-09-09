@@ -10,6 +10,7 @@ gem "webpacker", "~> 1.2"
 group :development, :test do
   gem "awesome_print", "~> 1.8"
   gem "bond", "~> 0.5"
+  gem "bootsnap", "~> 1.1", require: false
   gem "dotenv-rails", "~> 2.2"
   gem "git-cop", "~> 1.6"
   gem "hirb", "~> 0.7"

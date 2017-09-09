@@ -3,7 +3,7 @@
 require "open-uri"
 
 SLIM_TEMPLATE_NAME = "Rails Slim Template"
-SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/master"
+SLIM_TEMPLATE_ROOT = "https://raw.github.com/bkuhlmann/rails_slim_template/release"
 
 # Gemfile
 get "#{SLIM_TEMPLATE_ROOT}/rails/Gemfile", "Gemfile"
@@ -27,6 +27,9 @@ run "cp bin/setup bin/update"
 # Configuration - Initializers
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/inflections.rb", "config/initializers/inflections.rb"
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/initializers/backtrace_silencers.rb", "config/initializers/backtrace_silencers.rb"
+
+# Configuration - Boot
+insert_into_file "config/boot.rb", open("#{SLIM_TEMPLATE_ROOT}/rails/config/boot.delta.rb").read, after: %(require "bundler/setup" # Set up gems listed in the Gemfile.\n)
 
 # Configuration - Secrets
 get "#{SLIM_TEMPLATE_ROOT}/rails/config/secrets.yml", "config/secrets.yml"

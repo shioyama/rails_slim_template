@@ -40,6 +40,7 @@ The following highlights what is applied with this template:
 - Adds the [Webpacker](https://github.com/rails/webpacker) gem requirement.
 - Adds the [Awesome Print](https://github.com/michaeldv/awesome_print) gem requirement.
 - Adds the [Bond](https://github.com/cldwalker/bond) gem requirement.
+- Adds the [Bootsnap](https://github.com/Shopify/bootsnap) gem requirement.
 - Adds the [Dotenv Rails](https://github.com/bkeepers/dotenv) gem requirement.
 - Adds the [Hirb](https://github.com/cldwalker/hirb) gem requirement.
 - Adds the [Pry](https://github.com/pry/pry) gem requirement.
