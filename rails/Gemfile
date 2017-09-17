@@ -19,7 +19,7 @@ group :development, :test do
   gem "rails_best_practices", "~> 1.18", require: false
   gem "reek", "~> 4.7", require: false
   gem "rspec-rails", "~> 3.6"
-  gem "rubocop", "~> 0.49", require: false
+  gem "rubocop", "~> 0.50", require: false
   gem "scss_lint", "~> 0.51", require: false
   gem "wirb", "~> 2.1"
 end
