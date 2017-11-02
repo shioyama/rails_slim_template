@@ -11,14 +11,14 @@ RSpec.configure do |config|
   config.include AbstractController::Translation
   config.include ActiveSupport::Testing::TimeHelpers
   config.include ActiveJob::TestHelper, type: :job
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
   config.infer_spec_type_from_file_location!
 
   config.before :suite do
     Rails.application.load_tasks
 
-    FactoryGirl.lint
-    FactoryGirl.reload
+    FactoryBot.lint
+    FactoryBot.reload
 
     Capybara.default_wait_time = 120 if ENV["CI"].present?
     Capybara.asset_host = "http://localhost:3000"
