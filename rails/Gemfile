@@ -13,7 +13,7 @@ group :development, :test do
   gem "bootsnap", "~> 1.1", require: false
   gem "bundler-audit", "~> 0.6"
   gem "dotenv-rails", "~> 2.2"
-  gem "git-cop", "~> 1.6"
+  gem "git-cop", "~> 1.7"
   gem "hirb", "~> 0.7"
   gem "pry", "~> 0.10"
   gem "pry-byebug", "~> 3.5"
