@@ -2,6 +2,7 @@
     # Override generator defaults
     config.generators do |generator|
       generator.assets false
+      generator.channel assets: false
       generator.controller_specs false
       generator.helper false
       generator.template_engine :slim
