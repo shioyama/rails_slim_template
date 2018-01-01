@@ -42,10 +42,10 @@ The following highlights what is applied with this template:
 - Adds the [Bond](https://github.com/cldwalker/bond) gem requirement.
 - Adds the [Bootsnap](https://github.com/Shopify/bootsnap) gem requirement.
 - Adds the [Bundler Audit](https://github.com/rubysec/bundler-audit) gem requirement.
+- Adds the [Git Cop](https://github.com/bkuhlmann/git-cop) gem requirement.
 - Adds the [Hirb](https://github.com/cldwalker/hirb) gem requirement.
 - Adds the [Pry](https://github.com/pry/pry) gem requirement.
 - Adds the [Pry ByeBug](https://github.com/deivid-rodriguez/pry-byebug) gem requirement.
-- Adds the [Pry State](https://github.com/SudhagarS/pry-state) gem requirement.
 - Adds the [Reek](https://github.com/troessner/reek) gem requirement.
 - Adds the [RSpec Rails](https://github.com/dchelimsky/rspec-rails) gem requirement.
 - Adds the [Rubocop](https://github.com/bbatsov/rubocop) gem requirement.
@@ -57,7 +57,7 @@ The following highlights what is applied with this template:
 - Adds the [Capybara](https://github.com/jnicklas/capybara) gem requirement.
 - Adds the [Climate Control](https://github.com/thoughtbot/climate_control) gem requirement.
 - Adds the [Code Climate Test Reporter](https://github.com/codeclimate/ruby-test-reporter) gem requirement.
-- Adds the [Factory Girl Rails](https://github.com/thoughtbot/factory_girl_rails) gem requirement.
+- Adds the [Factory Bot Rails](https://github.com/thoughtbot/factory_bot_rails) gem requirement.
 - Adds the [Launchy](https://github.com/copiousfreetime/launchy) gem requirement.
 - Adds the [VCR](https://github.com/vcr/vcr) gem requirement.
 - Installs a customized application.html.erb file with a basic site layout.
@@ -80,7 +80,7 @@ preference:
 
 Current Version (stable):
 
-    rails new demo --skip-git --skip-gemfile --skip-bundle --skip-test --skip-spring --skip-turbolinks --skip-puma --skip-keeps --force --database postgresql --template https://raw.github.com/bkuhlmann/rails_slim_template/v6.3.0/template.rb
+    rails new demo --skip-git --skip-gemfile --skip-bundle --skip-test --skip-spring --skip-turbolinks --skip-puma --skip-keeps --force --database postgresql --template https://raw.github.com/bkuhlmann/rails_slim_template/v7.0.0/template.rb
 
 Master Version (unstable):
 

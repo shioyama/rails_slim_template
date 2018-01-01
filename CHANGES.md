@@ -1,3 +1,33 @@
+# v7.0.0 (2018-01-01)
+
+- Added Bootsnap gem.
+- Added Bundler Audit gem.
+- Added Gemfile.lock to .gitignore.
+- Added Git Cop code quality task.
+- Added Git Cop support.
+- Added dynamic formatting of RSpec output.
+- Updated CONTRIBUTING documentation.
+- Updated Code Climate configuration to Version 2.0.0.
+- Updated Gemfile.lock file.
+- Updated GitHub templates.
+- Updated README headers.
+- Updated gem dependencies.
+- Updated to Apache 2.0 license.
+- Updated to Awesome Print 1.8.0.
+- Updated to Bundler 1.16.0.
+- Updated to Code Quality 1.2.0.
+- Updated to Git Cop 1.7.0.
+- Updated to Rake 12.3.0.
+- Updated to Rubocop 0.52.0.
+- Updated to Ruby 2.5.0.
+- Removed Dotenv Rails gem.
+- Removed FactoryGirl gem (replaced by FactoryBot).
+- Removed Foreman gem.
+- Removed Poltergeist gem.
+- Removed Pry State gem.
+- Removed Rails Best Practices and SCSS Lint gems.
+- Removed channel asset generation.
+
 # v6.3.0 (2017-05-07)
 
 - Added Foreman gem.
