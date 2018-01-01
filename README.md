@@ -47,11 +47,9 @@ The following highlights what is applied with this template:
 - Adds the [Pry](https://github.com/pry/pry) gem requirement.
 - Adds the [Pry ByeBug](https://github.com/deivid-rodriguez/pry-byebug) gem requirement.
 - Adds the [Pry State](https://github.com/SudhagarS/pry-state) gem requirement.
-- Adds the [Rails Best Practices](http://rails-bestpractices.com) gem requirement.
 - Adds the [Reek](https://github.com/troessner/reek) gem requirement.
 - Adds the [RSpec Rails](https://github.com/dchelimsky/rspec-rails) gem requirement.
 - Adds the [Rubocop](https://github.com/bbatsov/rubocop) gem requirement.
-- Adds the [SCSS Lint](https://github.com/brigade/scss-lint) gem requirement.
 - Adds the [Wirb](https://github.com/janlelis/wirb) gem requirement.
 - Adds the [Listen](https://github.com/guard/listen) gem requirement.
 - Adds the [Milestoner](https://github.com/bkuhlmann/milestoner) gem requirement.
@@ -72,7 +70,7 @@ The following highlights what is applied with this template:
 ## Requirements
 
 0. A UNIX-based system.
-0. [Ruby 2.4.x](http://www.ruby-lang.org).
+0. [Ruby 2.5.x](http://www.ruby-lang.org).
 0. [Ruby on Rails 5.x.x](http://rubyonrails.org).
 0. A solid internet connection.
 

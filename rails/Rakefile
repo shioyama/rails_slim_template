@@ -4,25 +4,17 @@ begin
   require "git/cop/rake/setup"
   require "reek/rake/task"
   require "rubocop/rake_task"
-  require "scss_lint/rake_task"
 
   Reek::Rake::Task.new
   RuboCop::RakeTask.new
-  SCSSLint::RakeTask.new { |task| task.files = ["app/assets"] }
 rescue LoadError => error
   puts error.message
 end
 
 Rails.application.load_tasks
 
-desc "Run Rails Best Practices"
-task :rails_best_practices do
-  puts "Running Rails Best Practices..."
-  fail unless system "rails_best_practices --silent"
-end
-
 desc "Run code quality checks"
-task code_quality: %i[git_cop reek rubocop rails_best_practices scss_lint]
+task code_quality: %i[git_cop reek rubocop]
 
 task(:default).clear
 task default: %w[code_quality spec]
