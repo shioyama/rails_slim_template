@@ -123,7 +123,7 @@ run "rubocop --auto-correct > /dev/null"
 get "#{SLIM_TEMPLATE_ROOT}/rails/Rakefile", "Rakefile"
 
 # Pragma
-run %(pragmater --add . --comments "# frozen_string_literal: true" --whitelist "Gemfile" "Guardfile" "Rakefile" "config.ru" "bin/**/*" ".gemspec" ".rake" ".rb")
+run %(pragmater --add . --comments "# frozen_string_literal: true" --includes "Gemfile" "Guardfile" "Rakefile" "config.ru" "bin/**/*" ".gemspec" ".rake" ".rb")
 
 # Workarounds
 insert_into_file "bin/webpack", "  # rubocop:disable Security/YAMLLoad\n", after: "begin\n"
