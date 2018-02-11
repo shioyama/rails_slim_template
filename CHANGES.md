@@ -1,3 +1,11 @@
+# v7.1.0 (2018-02-11)
+
+- Fixed includes list for Pragmater gem.
+- Updated README license information.
+- Updated to Circle CI 2.0.0 configuration.
+- Updated to Code Quality 2.0.0.
+- Removed Patreon badge from README.
+
 # v7.0.0 (2018-01-01)
 
 - Added Bootsnap gem.
