@@ -1,11 +1,11 @@
 source "https://rubygems.org"
 
-gem "pg", "~> 0.21"
+gem "pg", "~> 1.0"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.1"
 gem "rake", "~> 12.3"
 gem "slim-rails", "~> 3.1"
-gem "webpacker", "~> 3.2"
+gem "webpacker", "~> 3.4"
 
 group :development, :test do
   gem "awesome_print", "~> 1.8"
@@ -18,7 +18,7 @@ group :development, :test do
   gem "pry-byebug", "~> 3.5"
   gem "reek", "~> 4.8", require: false
   gem "rspec-rails", "~> 3.7"
-  gem "rubocop", "~> 0.53", require: false
+  gem "rubocop", "~> 0.54", require: false
   gem "wirb", "~> 2.1"
 end
 
@@ -30,7 +30,7 @@ group :development do
 end
 
 group :test do
-  gem "capybara", "~> 2.15"
+  gem "capybara", "~> 2.18"
   gem "climate_control", "~> 0.1"
   gem "codeclimate-test-reporter", "~> 1.0"
   gem "factory_bot_rails", "~> 4.8"
