@@ -1,4 +1,4 @@
-# v7.2.0 (2018-04-01)
+# 7.2.0 (2018-04-01)
 
 - Updated gem dependencies.
 - Updated to Git Cop 2.2.0.
@@ -8,7 +8,7 @@
 - Updated to Tocer 7.1.0.
 - Refactored temp dir shared context as a pathname.
 
-# v7.1.0 (2018-02-11)
+# 7.1.0 (2018-02-11)
 
 - Fixed includes list for Pragmater gem.
 - Updated README license information.
@@ -16,7 +16,7 @@
 - Updated to Code Quality 2.0.0.
 - Removed Patreon badge from README.
 
-# v7.0.0 (2018-01-01)
+# 7.0.0 (2018-01-01)
 
 - Added Bootsnap gem.
 - Added Bundler Audit gem.
@@ -46,7 +46,7 @@
 - Removed Rails Best Practices and SCSS Lint gems.
 - Removed channel asset generation.
 
-# v6.3.0 (2017-05-07)
+# 6.3.0 (2017-05-07)
 
 - Added Foreman gem.
 - Added Webpacker gem.
@@ -57,7 +57,7 @@
 - Updated to Tocer 5.0.0.
 - Removed helper configuration from application controller.
 
-# v6.2.0 (2017-03-18)
+# 6.2.0 (2017-03-18)
 
 - Added Node and Elm modules to Git ignore.
 - Added PostgreSQL UUID primary key support.
@@ -70,14 +70,14 @@
 - Removed assets precompile comment from production environment.
 - Removed unnecessary addition of frozen string literals.
 
-# v6.1.0 (2017-03-04)
+# 6.1.0 (2017-03-04)
 
 - Fixed Ruby/Rails version checks.
 - Updated README semantic versioning order.
 - Updated RSpec configuration to output documentation when running.
 - Updated gem dependencies.
 
-# v6.0.0 (2017-02-05)
+# 6.0.0 (2017-02-05)
 
 - Fixed README to mention correct Rails version.
 - Fixed Rubocop issues.
@@ -107,7 +107,7 @@
 - Refactored RSpec configuration.
 - Refactored Rake tasks to be loaded from central location.
 
-# v5.0.0 (2016-11-14)
+# 5.0.0 (2016-11-14)
 
 - Fixed application setup.
 - Fixed contributing guideline links.
@@ -157,14 +157,14 @@
 - Refactored SCSS Lint Rake file name.
 - Refactored VCR cassettes to "spec/support" folder.
 
-# v4.2.0 (2016-01-18)
+# 4.2.0 (2016-01-18)
 
 - Added Pragmater whitelist to template.
 - Added Rubocop Style/StringLiteralsInInterpolation setting.
 - Removed RSpec default monkey patching behavior.
 - Removed unnecessary words from Git commit message.
 
-# v4.1.0 (2016-01-02)
+# 4.1.0 (2016-01-02)
 
 - Added [Pragmater](https://github.com/bkuhlmann/pragmater) support.
 - Added [Tocer](https://github.com/bkuhlmann/tocer) support.
@@ -172,7 +172,7 @@
 - Updated template to use "release" branch.
 - Updated to Ruby 2.3.0.
 
-# v4.0.0 (2015-11-06)
+# 4.0.0 (2015-11-06)
 
 - Fixed Factory Girl reloading so it only happens before a suite.
 - Fixed README typos.
@@ -234,7 +234,7 @@
 - Refactored RSpec extension support from "core" to "ruby" folder.
 - Refactored Rails helper RSpec config include order.
 
-# v3.0.0 (2014-12-29)
+# 3.0.0 (2014-12-29)
 
 - Updated to Ruby 2.2.0.
 - Updated to Rails 4.2.x.
@@ -246,7 +246,7 @@
 - Refactored RSpec `it_also` helper to simply `also`.
 - Refactored RSpec support extensions into core and rails specific extensions.
 
-# v2.0.0 (2014-10-18)
+# 2.0.0 (2014-10-18)
 
 - Removed deprecated RSpec settings.
 - Removed the Capistrano gem.
@@ -272,7 +272,7 @@
 - Refactored RSpec setup into extensions and kit configurations.
 - Refactored Rails specific configuration to RSpec Rails helper.
 
-# v1.2.0 (2014-05-18)
+# 1.2.0 (2014-05-18)
 
 - Refactored the "download_file" method to use the native Thor "get" method instead.
 - Updated to Ruby 2.1.2.
@@ -282,7 +282,7 @@
 - Added RSpec configuration to always use "expect" syntax.
 - Added RSpec helper and FactoryGirl initialization support.
 
-# v1.1.0 (2014-04-15)
+# 1.1.0 (2014-04-15)
 
 - Updated to MRI 2.1.1.
 - Updated to Rails 4.1.0.
@@ -291,6 +291,6 @@
 - Added the README.md file to template generation.
 - Added RSpec setup.
 
-# v1.0.0 (2013-09-22)
+# 1.0.0 (2013-09-22)
 
 - Initial version.
