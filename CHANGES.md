@@ -1,3 +1,13 @@
+# v7.2.0 (2018-04-01)
+
+- Updated gem dependencies.
+- Updated to Git Cop 2.2.0.
+- Updated to Milestoner 8.1.0.
+- Updated to Pragmater 5.1.0.
+- Updated to Ruby 2.5.1.
+- Updated to Tocer 7.1.0.
+- Refactored temp dir shared context as a pathname.
+
 # v7.1.0 (2018-02-11)
 
 - Fixed includes list for Pragmater gem.

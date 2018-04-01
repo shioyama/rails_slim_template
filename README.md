@@ -29,7 +29,7 @@ creating a new Ruby on Rails application.
 
 The following highlights what is applied with this template:
 
-- Uses [Ruby 2.4.x](http://www.ruby-lang.org).
+- Uses [Ruby 2.5.x](http://www.ruby-lang.org).
 - Uses [Ruby on Rails 5.x.x](http://rubyonrails.org).
 - Adds the [PG](https://bitbucket.org/ged/ruby-pg/wiki/Home) gem requirement.
 - Adds the [Puma](http://puma.io) gem requirement.
@@ -79,7 +79,7 @@ preference:
 
 Current Version (stable):
 
-    rails new demo --skip-git --skip-gemfile --skip-bundle --skip-test --skip-spring --skip-turbolinks --skip-puma --skip-keeps --force --database postgresql --template https://raw.github.com/bkuhlmann/rails_slim_template/v7.1.0/template.rb
+    rails new demo --skip-git --skip-gemfile --skip-bundle --skip-test --skip-spring --skip-turbolinks --skip-puma --skip-keeps --force --database postgresql --template https://raw.github.com/bkuhlmann/rails_slim_template/7.2.0/template.rb
 
 Master Version (unstable):
 
