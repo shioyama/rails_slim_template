@@ -26,7 +26,7 @@ group :development do
   gem "listen", "~> 3.1"
   gem "milestoner", "~> 7.0", require: false
   gem "pragmater", "~> 5.0", require: false
-  gem "tocer", "~> 7.0", require: false
+  gem "tocer", "~> 7.1", require: false
 end
 
 group :test do
