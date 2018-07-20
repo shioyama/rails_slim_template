@@ -67,10 +67,10 @@ The following highlights what is applied with this template:
 
 ## Requirements
 
-0. A UNIX-based system.
-0. [Ruby 2.5.x](http://www.ruby-lang.org).
-0. [Ruby on Rails 5.x.x](http://rubyonrails.org).
-0. A solid internet connection.
+1. A UNIX-based system.
+1. [Ruby 2.5.x](http://www.ruby-lang.org).
+1. [Ruby on Rails 5.x.x](http://rubyonrails.org).
+1. A solid internet connection.
 
 ## Usage
 
