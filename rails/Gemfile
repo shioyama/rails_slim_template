@@ -17,7 +17,7 @@ group :development, :test do
   gem "pry", "~> 0.10"
   gem "pry-byebug", "~> 3.5"
   gem "reek", "~> 5.0", require: false
-  gem "rspec-rails", "~> 3.7"
+  gem "rspec-rails", "~> 3.8"
   gem "rubocop", "~> 0.54", require: false
   gem "wirb", "~> 2.1"
 end
